@@ -1,0 +1,682 @@
+
+body {
+  	font-size: 14px;
+   	font-weight: 500;
+    color:#242223;
+  	font-family: 'Montserrat', sans-serif;
+}
+
+
+/*****************eServus Header Start***************/
+.padL{
+    padding-left: 0px;
+}
+.padR{
+    padding-left: 0px;
+}
+.eServusHeader{
+	position: relative;
+	padding-bottom: 10px;
+}
+.headerWrap{
+	padding-top: 28px;
+    padding-bottom: 28px;
+    border-bottom: 1px #e0e1e4 solid;
+}
+.searchBoxWrap{
+	position: relative;
+	overflow: visible;
+    width: 50%;
+    min-width: 100px;  
+}
+.headSearch .form-control{
+	padding: 9px 15px;
+    color: #999;
+    width: 100%;
+    height: 38px;
+    margin: 0;
+    line-height: 20px;
+    border: 1px solid #e8ecee;
+    border-radius: 19.98px;
+    box-shadow: none;
+}
+.headSearch .btn-default{
+	position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 38px;
+    color: #777;
+    font-size: 14px;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    cursor: pointer;
+}
+.headSearch .btn-default:hover,
+.headSearch .btn-default:focus{
+	color: #0088CC;
+    background-color: transparent;
+}
+.cart-area{
+
+}
+.cart-area .notification-block,
+.cart-area .custom-block,
+.cart-area .cart-dropdown {
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.cart-area .cart-dropdown {
+	position: relative;
+}
+.cart-area a{
+	text-decoration: none;
+}
+.cart-area i{
+	font-size: 20px;
+    color: #004a93;
+}
+.cart-area .notification {
+    color: #004a93 !important;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.cart-area .notification span.downArrow i {
+    color: #004a93;
+    font-size: 12px;
+    padding: 0px;
+    margin-left: 3px;
+}
+.cart-dropdown .cart-dropdown-icon {
+    position: relative;
+    display: inline-block;
+    height: 40px;
+    padding: 0;
+    text-align: center;
+    color: #fff;
+    text-decoration: none !important;
+}
+.cart-dropdown a:hover,
+.cart-dropdown a:focus{
+	text-decoration: none;
+}
+.cart-dropdown .cart-dropdown-icon i {
+    font-size: 20px;
+    color: #004a93;
+    margin: 0px;
+}
+.cart-dropdown a .cart {
+    color: #004a93;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.cart-dropdown span.cart,
+.notification span.note{
+    width: 100px;
+    height: 100px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #f7bd02;
+    color: #fff;
+    padding: 5px;
+    margin-left: 3px;
+}
+@media screen and (max-width: 767px) {
+	.searchBoxWrap,
+	.cart-area .custom-block{
+		display: none;
+	}
+	.headerWrap .header-logo{
+		float: right;
+	}
+}
+@media screen and (max-width: 350px) {
+	.cart-area .notification-block{
+		 margin-right: 4px;
+	}
+}
+/*****************eServus Navigation Start***************/
+
+.eServusHeader .navWrapper {
+    padding: 0;
+    background-color: #004a93;
+    min-height: 53px;
+}
+
+
+.navWrapper nav {
+ 	width: 380px;
+    margin: 0 auto;
+    min-height: 45px;
+}
+.navWrapper nav ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.navWrapper nav ul li {
+  float: left;
+  margin-left: 3px;
+    
+}
+.menu-trigger {
+    display:none;
+  }
+.navWrapper nav li> a {
+  	color: #fff;
+	  display: block;
+	  text-align: center;
+	  text-decoration: none;
+	  text-transform: uppercase;
+	  font-size: 12px;
+	  font-style: normal;
+	font-weight: 500;
+	line-height: 20px;
+	padding: 15px 20px;
+ }
+
+.navWrapper nav li> a:hover {
+  color: #f8bc02;
+  border-bottom: 3px solid #f8bc02;
+}
+
+.menu-trigger {
+    display:none;
+    width: 50px;
+    height: auto;
+    font-size: 28px;
+    line-height: 40px;
+    text-align: center;
+    padding: 0;
+    float: left;
+    margin: 0px 0px;
+    vertical-align: middle;
+    color: #004a93;
+}
+
+@media screen and (max-width:767px) {
+	.eServusHeader .navWrapper {
+	    padding: 0;
+	    background-color: transparent;
+	    position: absolute;
+	    top: 20px;
+	    left: 20px;
+	    width: 150px;
+	}
+  .menu-trigger {
+    display:block;
+    width: 100%;
+    text-align: left;
+  }
+  .navWrapper nav{
+  	 width: 150px;
+  }
+  .navWrapper nav ul li {
+    display:block;
+    float: none;   
+  }
+  .navWrapper nav ul {
+    display:none;
+    width: 130px;
+    background-color: #fff;
+    position: absolute;
+    top: 45px;
+    text-transform: none;
+    min-width: 130px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+  }
+
+  .navWrapper nav li> a {
+  	color: #004a93;
+    font-weight: 700;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+}
+@media screen and (max-width:550px) {
+	.eServusHeader .navWrapper {
+	    
+	    top: 50px;
+	    
+	}
+}
+/*****************eServus Navigation End***************/
+
+
+
+/*****************eServus Header End***************/
+
+
+
+/*****************eServus Footer Start***************/
+.footer{
+	border-top: 1px solid #e4e8eb;
+    font-size: 14px;
+    padding: 40px 0 0;
+    position: relative;
+    clear: both;
+}
+.footer .footLogo{
+	margin-bottom: 30px;
+}
+.footerLinks ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.footerLinks li{
+	position: relative;
+    padding: 10.5px 0;
+    line-height: 1;
+    display: block;
+}
+.footerLinks li>a{
+	color: #2c2a2b;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+.footerSocial>p{
+	font-size: 16px;
+    font-weight: 400;
+    float: left;
+    width: 150px;
+}
+.footerSocial>i{
+	font-size: 20px;
+    font-weight: 400;
+    margin: 0 5px;
+}
+.footerSocial .contact-details {
+    margin-top: 12px;
+    line-height: 24px;
+}
+.footerSocial .contact-details>a {
+	text-decoration: none;
+	color: #2c2a2b;
+}
+.newsletter .newsletterInfo {
+    margin-bottom: 20px;
+}
+.newsletter input.form-control {
+    height: 50px;
+    padding: 6px 12px;
+}
+.newsletter .input-group{
+	position: relative;
+	width: 100%;
+}
+.newsletter .input-group .SignUpBtn {
+   position: absolute;
+    right: 4px;
+    top: 15%;
+    z-index: 10;
+   
+}
+.newsletter .input-group .SignUpBtn button{
+	background-color: #fff;
+   color: #004a93;
+   border: 0;
+}
+.newsletter .pricavy-details {
+    color: #91959d;
+    font-size: 11px;
+    margin-top: 20px;
+    line-height: 24px;
+}
+.footerLinks, .footerSocial, .newsletter{
+	margin-bottom: 30px;
+}
+.footer-copyright {
+    color: #777;
+    border-top: 1px solid #e4e8eb;
+    padding: 10px 0 10px;
+    margin-top: 10px;
+}
+.footer-copyright .copyright-text {
+    font-size: 12px;
+    color: #777;
+    padding-top: 10px;
+}
+/*****************eServus Footer End***************/
+
+
+/*****************My Community Start***************/
+
+
+/*****for homepageBar section start*****/
+.landingWrapper .container,
+.eServusHeader .container,
+.footer .container, 
+.BuildingWrapper .container{
+    max-width: 1024px;
+}
+.socialFeedWrap .container{
+    max-width: 620px;
+}
+.homepageBar .streetCount h3 {
+    color: #818181;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 66px;
+}
+
+.homepageBar .pageTitle,
+.socialFeedWrap .pageTitle,
+.annoNewsWrap .pageTitle{
+	color: #1e1c1d;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 45px;
+    
+}
+.pageTitle h2{
+    margin-bottom: 20px;
+}
+.titleBorder{
+	width: 60px;
+	margin: 0 auto;
+	border-bottom: 3px #f8bc02 solid;
+}
+/*****for homepageBar section End******/
+
+/***for Slider Start*/
+.sliderWrap ul {
+    list-style: none outside none;
+    padding-left: 0;
+    margin-bottom:0;
+}
+
+/***for Slider End*/
+.communitySlider{
+   margin-bottom: 85px;
+}
+.commFeatures{
+    margin-bottom: 5px;
+}
+.commFeatures .row [class*="col-"]{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.FeaturesBox{
+	text-align: center;
+    border: 1px solid #eaebed;
+    padding: 20px 0px;
+    margin-bottom: 20px;
+}
+.FeaturesBox:hover{
+	background-color: #eaebed;
+}
+.FeaturesBox>a>img{
+	margin: 0 auto;
+}
+
+.socialFeedWrap .container{
+	width: 70%;
+	margin: 0 auto;
+}
+.sociFeedPost input.form-control {
+    height: 56px;
+    padding: 6px 25px;
+}
+.sociFeedPost .input-group{
+	position: relative;
+	width: 100%;
+}
+.sociFeedPost .input-group .SignUpBtn {
+    position: absolute;
+    right: 13px;
+    top: 18%;
+    z-index: 10;
+   
+}
+.sociFeedPost .input-group .SignUpBtn button{
+	background-color: #fff;
+   color: #004a93;
+   border: 0;
+   font-size: 18px;
+   font-weight: 700;
+}
+.sociFeedPost .input-group .SignUpBtn button i{
+	padding-right: 10px;
+}
+.sociFeedPost{
+	padding-bottom: 40px;
+}
+.sociFeedContent{
+	margin-bottom: 40px;
+	 border-bottom: 1px solid #eaebed;
+}
+.sociFeedContent:last-child{
+    border-bottom: none;
+}
+
+.sociFeedContTxt .sociTxt{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    text-align: left;
+
+}
+.morePostLink{
+    margin-bottom: 0px;
+}
+.ContTxtLink>a, .morePostLink>a{
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #f8bc02;
+    padding: 0px 5px;
+    text-decoration: none;
+}
+.morePostLink>a{
+  padding: 0px;
+}
+.ContTxtLink>a span, .morePostLink>a i{
+    padding-left: 5px;
+}
+.advertiseBottom{
+    margin-bottom: 5px;
+}
+.advertiseBottom .addContent{
+    min-height: 100px;
+    background-color: #eaebed;
+    padding-top: 30px;
+}
+.addContent .addHere{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+@media screen and (max-width: 767px) {
+.sociFeedContImg, .sociFeedContTxt{
+    text-align: center;
+    margin-bottom: 15px
+}
+.sociFeedContTxt .sociTxt, 
+.sociFeedContTxt .ContTxtLink, 
+.sociFeedContTxt .morePostLink{
+    text-align: left;
+}
+.weatherInfo, .calenderWrap{
+    display: none;
+}
+
+}
+
+/*********Community Tabs Start*********/
+
+@media screen and (max-width: 479px) {
+  .nav-tabs-responsive > li {
+    display: none;
+    width: 23%;
+  }
+  .nav-tabs-responsive > li > a {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    width: 100%;
+    width: 100%;
+    text-align: center;
+    vertical-align: top;
+  }
+  .nav-tabs-responsive > li.active {
+    width: 54%;
+  }
+  .nav-tabs-responsive > li.active:first-child {
+    margin-left: 23%;
+  }
+  .nav-tabs-responsive > li.active, .nav-tabs-responsive > li.prev, .nav-tabs-responsive > li.next {
+    display: block;
+  }
+  .nav-tabs-responsive > li.prev, .nav-tabs-responsive > li.next {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  .nav-tabs-responsive > li.next > a, .nav-tabs-responsive > li.prev > a {
+    -webkit-transition: none;
+    transition: none;
+  }
+  .nav-tabs-responsive > li.next > a .text, .nav-tabs-responsive > li.prev > a .text {
+    display: none;
+  }
+  .nav-tabs-responsive > li.next > a:after, .nav-tabs-responsive > li.next > a:after, .nav-tabs-responsive > li.prev > a:after, .nav-tabs-responsive > li.prev > a:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    color: #f8bc02;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .nav-tabs-responsive > li.prev > a:after {
+    content: "\e079";
+  }
+  .nav-tabs-responsive > li.next > a:after {
+    content: "\e080";
+  }
+  .nav-tabs-responsive > li.dropdown > a > .caret {
+    display: none;
+  }
+  .nav-tabs-responsive > li.dropdown > a:after {
+    content: "\e114";
+  }
+  .nav-tabs-responsive > li.dropdown.active > a:after {
+    display: none;
+  }
+  .nav-tabs-responsive > li.dropdown.active > a > .caret {
+    display: inline-block;
+  }
+  .nav-tabs-responsive > li.dropdown .dropdown-menu.pull-xs-left {
+    left: 0;
+    right: auto;
+  }
+  .nav-tabs-responsive > li.dropdown .dropdown-menu.pull-xs-center {
+    right: auto;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  .nav-tabs-responsive > li.dropdown .dropdown-menu.pull-xs-right {
+    left: auto;
+    right: 0;
+  }
+}
+/**
+ * Demo Styles
+ */
+
+.Announcements-tabs .nav-tabs {
+     border-bottom: none; 
+}
+.Announcements-tabs .nav-tabs>li.active>a, .Announcements-tabs .nav-tabs>li.active>a:focus, 
+.Announcements-tabs .nav-tabs>li.active>a:hover {
+    color: #00539a;
+    font-weight: 700;
+    font-size: 12px;
+    border: none;
+    border-bottom: 3px solid #00539a;
+}
+/*.Announcements-tabs .nav-tabs .prev> a ,
+.Announcements-tabs .nav-tabs .next> a{
+    color: #f8bc02!important;
+    font-size: 12px;
+}*/
+.Announcements-tabs .nav-tabs>li>a {
+    color: #6d6d6d;
+    font-size: 12px;
+}
+.Announcements-tabs .nav>li>a:focus, .Announcements-tabs .nav>li>a:hover {
+     background-color: transparent; 
+}
+.Announcements-tabs .nav-tabs>li>a:hover {
+     border-color: transparent; 
+}
+.tabDataWrap .tabDataContent {
+  padding: 15px 0px;
+  border-top: 1px solid #eaebed;
+  background-color: #f8f8f8;
+}
+.tabDataTxt{
+    font-size: 12px;
+}
+.tabDataTxt .txtSender>a{
+    text-decoration: none;
+    color: #f8bc02;
+}
+/*********Community Tabs End*********/
+.annoNewsWrap{
+    margin-bottom: 15px;
+}
+.advertiseWrap{
+    min-height: 315px;
+    background-color: #f8f8f8;
+    margin-top: 40px;
+
+}
+.advertiseWrap .addTxt{
+    text-align: center;
+    font-size: 30px;
+    padding-top: 120px;
+}
+/*****************My Community End***************/
+
+
+
+/*****************My Building Start***************/
+#rotating-item-wrapper {
+  position: relative;
+  width: 980px;
+  height: 347px;
+
+}
+.rotating-item {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.BuildingSlider{
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+/*****************My Building End***************/

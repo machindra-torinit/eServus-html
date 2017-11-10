@@ -59,9 +59,7 @@ body {
 	color: #0088CC;
     background-color: transparent;
 }
-.cart-area{
 
-}
 .cart-area .notification-block,
 .cart-area .custom-block,
 .cart-area .cart-dropdown {
@@ -77,7 +75,8 @@ body {
 .cart-area a{
 	text-decoration: none;
 }
-.cart-area i{
+.cart-area .notification-block i,
+.cart-area .custom-block i{
 	font-size: 20px;
     color: #004a93;
 }
@@ -129,6 +128,10 @@ body {
     padding: 5px;
     margin-left: 3px;
 }
+.cartDropDownMenu{
+  display: none;
+}
+
 @media screen and (max-width: 767px) {
 	.searchBoxWrap,
 	.cart-area .custom-block{
@@ -143,6 +146,34 @@ body {
 		 margin-right: 4px;
 	}
 }
+/*****for Cart Dropdown menu Start**********/
+.cart-dropdown:hover .cartDropDownMenu{
+  display: block;
+}
+.cartDropDownMenu{
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 300px;
+  background-color: #fff;
+  padding: 20px;
+  z-index: 100;
+  color: #777;
+  border-top: 6px solid #0088CC;
+  border-radius: 7.98px 7.98px 5px 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+.cartProductTable .table> tbody>tr>td{
+  vertical-align: middle;
+}
+.cartProductTable .table> tbody>tr:first-child>td{
+  border-top: 0px;
+}
+
+/*****for Cart Dropdown menu End**********/
+
+
 /*****************eServus Navigation Start***************/
 
 .eServusHeader .navWrapper {
@@ -366,7 +397,7 @@ body {
 .homepageBar .streetCount h3 {
     color: #818181;
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 700;
     margin: 0;
     line-height: 66px;
 }
@@ -397,11 +428,89 @@ body {
     padding-left: 0;
     margin-bottom:0;
 }
-
-/***for Slider End*/
+.sliderWrap ul>li{
+  position: relative;
+}
+.sliderWrap ul>li .imgTxtWrap,
+.BuildSliderWrap ul>li .imgTxtWrap{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #00539a;
+  z-index: 10;
+  font-size: 14px;
+  background-color: #fff;
+  border-bottom: 3px solid #00539a;
+  opacity: 0.8;
+  padding: 10px;
+  width: 100%;
+}
+.sliderWrap ul>li>img{
+  width: 100%;
+}
+.BuildSliderWrap ul>li>img{
+  width: 100%;
+}
 .communitySlider{
    margin-bottom: 85px;
 }
+/***for Slider End*/
+
+
+/***for Calender Start*/
+
+.fc-toolbar.fc-header-toolbar {
+    margin-bottom: 10px; 
+    padding: 5px 0px;
+    border-bottom: 1px solid #ddd;
+}
+.fc-toolbar h2 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #f8bc02;
+
+}
+.fc-button{
+  border: none;
+  background: none;
+  border-radius: 0px;
+  box-shadow: none;
+  height: 1.4em!important;
+  color: #f8bc02;
+}
+.fc-unthemed .fc-row{
+  border: 0px;
+}
+.fc td, .fc th {
+    border-style: solid;
+    border-width: 0px;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 12px;
+    font-weight: 700;
+    /*color: #9ca4ab;*/
+
+}
+.fc th { 
+ 
+  text-transform: uppercase;
+}
+.fc-head-container{
+  padding-bottom: 15px!important;
+}
+.fc-basic-view .fc-body .fc-row {
+    min-height: 3.9em;
+}
+.fc-ltr .fc-basic-view .fc-day-top .fc-day-number {
+    float: none;
+}
+.fc-scroller{
+  overflow-x: visible;
+}
+
+/***for Calender End*/
+
 .commFeatures{
     margin-bottom: 5px;
 }
@@ -458,30 +567,38 @@ body {
 	margin-bottom: 40px;
 	 border-bottom: 1px solid #eaebed;
 }
-.sociFeedContent:last-child{
-    border-bottom: none;
+.sociFeedContentWrap .sociFeedContent:last-of-type{
+    margin-bottom: 0px;
 }
-
 .sociFeedContTxt .sociTxt{
     margin-top: 10px;
     margin-bottom: 30px;
     text-align: left;
 
 }
-.morePostLink{
-    margin-bottom: 0px;
+.morePostLinkWrap{
+  margin-top: 10px;
+  margin-bottom: 40px;
 }
-.ContTxtLink>a, .morePostLink>a{
+.moreAnnLink{
+    margin-bottom: 0px;
+    margin-top: 10px;  
+}
+.moreAnnLink>a{padding: 0px;}
+.ContTxtLink>a, .moreAnnLink>a,
+.morePostLink>a{
     margin-bottom: 20px;
     font-size: 14px;
     color: #f8bc02;
     padding: 0px 5px;
     text-decoration: none;
 }
+.moreAnnLink>a,
 .morePostLink>a{
   padding: 0px;
 }
-.ContTxtLink>a span, .morePostLink>a i{
+.ContTxtLink>a span, .moreAnnLink>a i,
+.morePostLink>a i{
     padding-left: 5px;
 }
 .advertiseBottom{
@@ -504,7 +621,7 @@ body {
 }
 .sociFeedContTxt .sociTxt, 
 .sociFeedContTxt .ContTxtLink, 
-.sociFeedContTxt .morePostLink{
+.sociFeedContTxt .moreAnnLink{
     text-align: left;
 }
 .weatherInfo, .calenderWrap{
@@ -614,11 +731,7 @@ body {
     border: none;
     border-bottom: 3px solid #00539a;
 }
-/*.Announcements-tabs .nav-tabs .prev> a ,
-.Announcements-tabs .nav-tabs .next> a{
-    color: #f8bc02!important;
-    font-size: 12px;
-}*/
+
 .Announcements-tabs .nav-tabs>li>a {
     color: #6d6d6d;
     font-size: 12px;

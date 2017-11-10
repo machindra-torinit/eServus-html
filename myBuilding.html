@@ -8,6 +8,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/lightslider.css" rel="stylesheet">
     <link href="css/eServus-front.css" rel="stylesheet">
 
 </head>
@@ -137,19 +138,35 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="BuildSliderWrap">
-							<div id="rotating-item-wrapper"> 
-								<img src="images/Hero_Banner_01.jpg" alt="" class="rotating-item" /> 
+							<div class="clearfix">
+				                <ul id="buildingSlider" class="gallery list-unstyled">
+				                    <li data-thumb=""> 
+				                        <img src="images/Hero_Banner_01.jpg" class="img-responsive" />
+				                         </li>
+				                    <li data-thumb=""> 
+				                        <img src="images/slide1.jpg" class="img-responsive" />
+				                        <div class="imgTxtWrap">
+				                        	<p>Just a reminder about the annual avacuation drill on THURSUDAY, OCTOMBER 12. check with your fire wardens for more information.</p>
+				                        </div>
 
-								<img src="images/slide1.jpg" alt="" class="rotating-item" /> 
-
-								<img src="images/Hero_Banner_01.jpg" alt="" class="rotating-item" /> 
-
-								<img src="images/slide1.jpg" alt="" class="rotating-item"/> 
-
-								<img src="images/Hero_Banner_01.jpg" alt="" class="rotating-item" /> 
-
-								<img src="images/manequine.jpg" alt="" class="rotating-item" />
-							</div>
+				                         </li>
+				                    <li data-thumb=""> 
+				                        <img src="images/Hero_Banner_01.jpg" class="img-responsive" />
+				                         </li>
+				                    <li data-thumb=""> 
+				                        <img src="images/slide1.jpg" class="img-responsive" />
+				                         </li>
+				                    <li data-thumb=""> 
+				                        <img src="images/Hero_Banner_01.jpg" class="img-responsive" />
+				                         </li>
+				                    <li data-thumb=""> 
+				                        <img src="images/slide1.jpg" class="img-responsive" />
+				                         <div class="imgTxtWrap">
+				                        	<p>Just a reminder about the annual avacuation drill on THURSUDAY, OCTOMBER 12. check with your fire wardens for more information.</p>
+				                        </div>
+				                         </li>
+				                </ul>
+				            </div>
 						</div>
 					</div>
 
@@ -312,7 +329,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   	<script src="js/bootstrap.min.js"></script>
 	<script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
-
+	<script src="js/lightslider.js"></script>
    
     <script type="text/javascript">
 
@@ -323,46 +340,21 @@
 		  });//end slide toggle
 		});//end ready
       
-      	$(window).load(function() { //start after HTML, images have loaded
-
-		    var InfiniteRotator = {
-		        init: function() {
-		            //initial fade-in time (in milliseconds)
-		            var initialFadeIn = 1000;
-
-		            //interval between items (in milliseconds)
-		            var itemInterval = 5000;
-
-		            //cross-fade time (in milliseconds)
-		            var fadeTime = 2500;
-
-		            //count number of items
-		            var numberOfItems = $('.rotating-item').length;
-
-		            //set current item
-		            var currentItem = 0;
-
-		            //show first item
-		            $('.rotating-item').eq(currentItem).fadeIn(initialFadeIn);
-
-		            //loop through the items		
-		            var infiniteLoop = setInterval(function() {
-		                $('.rotating-item').eq(currentItem).fadeOut(fadeTime);
-
-		                if (currentItem == numberOfItems - 1) {
-		                    currentItem = 0;
-		                } else {
-		                    currentItem++;
-		                }
-		                $('.rotating-item').eq(currentItem).fadeIn(fadeTime);
-
-		            }, itemInterval);
-		        }
-		    };
-
-		    InfiniteRotator.init();
-
-		});
+      	//Slider JS
+		 $('#buildingSlider').lightSlider({
+		        gallery:true,
+                item:1,
+                thumbItem:0,
+                slideMargin: 0,
+                speed:2000,
+                auto:true,
+                loop:true,
+                vertical:false,
+                vThumbWidth: 1,
+                verticalHeight: 373,
+                controls: false,
+                mode: "fade",
+            });
     </script>
 </body>
 </html>

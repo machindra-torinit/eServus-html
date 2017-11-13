@@ -5,8 +5,35 @@ body {
     color:#242223;
   	font-family: 'Montserrat', sans-serif;
 }
-
-
+.lgBtn {
+    width: 200px;
+    font-size: 16px;
+    padding: 12px;
+    background: #f8bc02;
+    border-radius: 25px;
+    border: none;
+    color: #fff;
+    margin-bottom: 10px;
+}
+/*[type="color"], [type="date"], [type="datetime-local"], [type="datetime"], [type="email"], [type="month"], [type="number"], [type="password"], [type="search"], [type="tel"], [type="text"], [type="time"], [type="url"], [type="week"], textarea {
+    -moz-appearance: none;
+    background-color: #fefefe;
+    border: 1px solid #cacaca;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px hsla(0, 0%, 4%, 0.1) inset;
+    box-sizing: border-box;
+    color: #0a0a0a;
+    display: block;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+    height: 2.3em;
+    margin: 0 0 1em;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    transition: box-shadow 0.5s ease 0s, border-color 0.25s ease-in-out 0s;
+    width: 100%;
+}*/
 /*****************eServus Header Start***************/
 .padL{
     padding-left: 0px;
@@ -146,33 +173,6 @@ body {
 		 margin-right: 4px;
 	}
 }
-/*****for Cart Dropdown menu Start**********/
-.cart-dropdown:hover .cartDropDownMenu{
-  display: block;
-}
-.cartDropDownMenu{
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 100%;
-  width: 300px;
-  background-color: #fff;
-  padding: 20px;
-  z-index: 100;
-  color: #777;
-  border-top: 6px solid #0088CC;
-  border-radius: 7.98px 7.98px 5px 5px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-}
-.cartProductTable .table> tbody>tr>td{
-  vertical-align: middle;
-}
-.cartProductTable .table> tbody>tr:first-child>td{
-  border-top: 0px;
-}
-
-/*****for Cart Dropdown menu End**********/
-
 
 /*****************eServus Navigation Start***************/
 
@@ -500,7 +500,10 @@ body {
   padding-bottom: 15px!important;
 }
 .fc-basic-view .fc-body .fc-row {
-    min-height: 3.9em;
+    min-height: 2.2em;
+}
+.fc-basic-view .fc-body .fc-row:last-child{
+    display: none;
 }
 .fc-ltr .fc-basic-view .fc-day-top .fc-day-number {
     float: none;
@@ -508,9 +511,33 @@ body {
 .fc-scroller{
   overflow-x: visible;
 }
-
+@media screen and (max-width: 991px){
+  .weatherInfo, .calenderWrap{
+    display: none;
+  }
+}
 /***for Calender End*/
-
+.createEventWrap .lgBtn{
+    width: 100%;
+    font-weight: 700;
+    margin-top: 5px;
+}
+.createEventWrap{
+  text-align: center;
+}
+.createEventLink>a{
+  text-decoration: none;
+  color: #f8bc02;
+  font-size: 16px;
+  font-weight: 700;
+}
+@media screen and (max-width: 991px){
+  .createEventWrap .lgBtn{
+      width: 300px;
+      font-weight: 700;
+      margin: 25px auto 0px;
+  }
+}
 .commFeatures{
     margin-bottom: 5px;
 }
@@ -521,14 +548,22 @@ body {
 .FeaturesBox{
 	text-align: center;
     border: 1px solid #eaebed;
-    padding: 20px 0px;
+    padding: 40px 0px;
     margin-bottom: 20px;
+    min-height: 220px;
 }
 .FeaturesBox:hover{
 	background-color: #eaebed;
 }
+.FeaturesBox>a{
+  text-decoration: none;
+  font-size: 14px;
+  color:#242223;
+  font-family: 'Montserrat', sans-serif;
+}
 .FeaturesBox>a>img{
-	margin: 0 auto;
+	margin: auto auto 30px;
+  max-height: 75px;
 }
 
 .socialFeedWrap .container{
@@ -567,8 +602,18 @@ body {
 	margin-bottom: 40px;
 	 border-bottom: 1px solid #eaebed;
 }
+.sociFeedContImg{
+  max-width: 85px;
+    max-height: 85px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.sociFeedContImg>img{
+  width: 100%;
+}
 .sociFeedContentWrap .sociFeedContent:last-of-type{
     margin-bottom: 0px;
+    border-bottom: 0px;
 }
 .sociFeedContTxt .sociTxt{
     margin-top: 10px;
@@ -581,8 +626,8 @@ body {
   margin-bottom: 40px;
 }
 .moreAnnLink{
-    margin-bottom: 0px;
-    margin-top: 10px;  
+    padding: 0px 15px 15px;
+    background-color: #f8f8f8;
 }
 .moreAnnLink>a{padding: 0px;}
 .ContTxtLink>a, .moreAnnLink>a,
@@ -623,9 +668,6 @@ body {
 .sociFeedContTxt .ContTxtLink, 
 .sociFeedContTxt .moreAnnLink{
     text-align: left;
-}
-.weatherInfo, .calenderWrap{
-    display: none;
 }
 
 }
@@ -716,9 +758,6 @@ body {
     right: 0;
   }
 }
-/**
- * Demo Styles
- */
 
 .Announcements-tabs .nav-tabs {
      border-bottom: none; 
@@ -769,6 +808,120 @@ body {
     font-size: 30px;
     padding-top: 120px;
 }
+
+
+/*****************Create Event modal Start***************/
+.create-event-popup-modal .modal-title{
+  color: #00539a;
+  font-weight: 700;
+}
+.create-event-popup-modal .modal-body{
+  border: none;
+  border-radius: 2px;
+}
+.create-event-popup-modal .modal-footer {
+  text-align: center;  
+  border: none;
+  padding: 0px;
+}
+.create-event-popup-modal .modal-footer button{
+  margin-bottom: 0px;
+}
+.create-event-popup-modal .modal-content{
+    border-bottom:4px solid #337ab7;
+    border-radius: 0px;
+    padding: 40px;
+    background-color: #f9f9f9;
+}
+.createEventForm .uploadPhoto{
+  position: relative;
+}
+.createEventForm .uploadPhoto>input{
+  padding-left: 50px;
+}
+.createEventForm .uploadPhoto .uploadIcon{
+    position: absolute;
+    left: 20px;
+    top: 6px;
+    color: #00539a;
+    font-size: 18px;
+}
+.createEventForm textarea{
+  resize: none;
+  min-height: 120px;
+}
+.evevntDateTime .evevntDate{
+ float: left;
+  width: 45%;
+  margin-right: 5px;
+  position: relative;
+}
+.evevntDateTime .evevntDate>input{
+  padding-right: 35px;
+}
+.evevntDate .dateIcon{
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    color: #00539a;
+    font-size: 18px;
+}
+.evevntDateTime .eventTime{
+ float: left;
+  width: 38%;
+}
+.evevntDateTime .dateEditLink{
+  float: left;
+  width: 15%;
+  text-align: right;
+  line-height: 2.4;
+}
+.evevntDateTime .dateEditLink>a,
+.evevntDateTime .edtTimeLink>a{
+  text-decoration: none;
+  color: #f8bc02;
+}
+.evevntDateTime .edtTimeLink{
+  text-align: right;
+  margin-top: 5px;
+}
+/*****************Create Event modal End***************/
+
+
+/*****************Announcements & News modal Start***************/
+.annsmntNewsPopupModal .modal-content{
+  padding: 15px;
+}
+.newsPopupContentWrap .row [class*="col-"]{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.newsPopupContentWrap .col-md-3:nth-child(4n+1){
+  clear: both;
+}
+.news-icon{
+    text-align: center;
+    border: 1px solid #eaebed;
+    padding: 10px;
+    margin-bottom: 20px;
+   /* min-height: 220px;*/
+}
+.news-icon:hover{
+  background-color: #eaebed;
+}
+.news-icon>a{
+  text-decoration: none;
+  font-size: 14px;
+  color:#242223;
+  font-family: 'Montserrat', sans-serif;
+}
+.news-icon>a>img{
+  margin: auto;
+ /* max-height: 75px;*/
+}
+/*****************Announcements & News modal End***************/
+
+
 /*****************My Community End***************/
 
 

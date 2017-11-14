@@ -15,25 +15,7 @@ body {
     color: #fff;
     margin-bottom: 10px;
 }
-/*[type="color"], [type="date"], [type="datetime-local"], [type="datetime"], [type="email"], [type="month"], [type="number"], [type="password"], [type="search"], [type="tel"], [type="text"], [type="time"], [type="url"], [type="week"], textarea {
-    -moz-appearance: none;
-    background-color: #fefefe;
-    border: 1px solid #cacaca;
-    border-radius: 5px;
-    box-shadow: 0 1px 2px hsla(0, 0%, 4%, 0.1) inset;
-    box-sizing: border-box;
-    color: #0a0a0a;
-    display: block;
-    font-family: inherit;
-    font-size: 16px;
-    font-weight: 400;
-    height: 2.3em;
-    margin: 0 0 1em;
-    margin-bottom: 1em;
-    padding: 0.5em;
-    transition: box-shadow 0.5s ease 0s, border-color 0.25s ease-in-out 0s;
-    width: 100%;
-}*/
+
 /*****************eServus Header Start***************/
 .padL{
     padding-left: 0px;
@@ -41,9 +23,16 @@ body {
 .padR{
     padding-left: 0px;
 }
+header{
+  position: fixed;
+  z-index: 50;
+  width: 100%;
+  top: 0;
+}
 .eServusHeader{
 	position: relative;
 	padding-bottom: 10px;
+  background-color: #fff;
 }
 .headerWrap{
 	padding-top: 28px;
@@ -209,7 +198,7 @@ body {
 	  text-transform: uppercase;
 	  font-size: 12px;
 	  font-style: normal;
-	font-weight: 500;
+	 font-weight: 500;
 	line-height: 20px;
 	padding: 15px 20px;
  }
@@ -218,7 +207,10 @@ body {
   color: #f8bc02;
   border-bottom: 3px solid #f8bc02;
 }
-
+.navActive{
+  color: #f8bc02!important;
+  border-bottom: 3px solid #f8bc02;
+}
 .menu-trigger {
     display:none;
     width: 50px;
@@ -382,8 +374,14 @@ body {
 
 
 /*****************My Community Start***************/
-
-
+.landingWrapper{
+  margin-top: 158px;
+}
+@media screen and (max-width: 767px){
+  .landingWrapper{
+    margin-top: 95px;
+  }
+}
 /*****for homepageBar section start*****/
 .landingWrapper .container,
 .eServusHeader .container,
@@ -888,6 +886,59 @@ body {
 /*****************Create Event modal End***************/
 
 
+/*****************All Events in Month modal Start***************/
+.allEventPopupModal .modal-content{
+    border-bottom:4px solid #337ab7;
+    border-radius: 0px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+.allEventPopupWrap .eventListHeader{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.eventListHeader .preEvent{
+  float: left;
+}
+.eventListHeader .nextEvent{
+  float: right;
+}
+.eventListHeader .eventTitle{
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #004a93;
+}
+.eventListHeader .preEvent a,
+.eventListHeader .nextEvent a{
+  text-decoration: none;
+  color: #f8bc02;
+}
+.eventListWrap{
+  max-height: 500px;
+  overflow: auto;
+}
+.eventListWrap .eventData{
+  margin-bottom: 20px;
+}
+.eventListWrap .eventData .evevntDate{
+  margin-bottom: 10px;
+  text-align: center;
+}
+.eventListWrap .eventData .eventImg>img{
+  width: 100%;
+  max-height: 155px;
+}
+.eventListWrap .eventData .evevntDate a{
+  text-decoration: none;
+  color: #f8bc02;
+}
+/*****************All Events in Month modal End***************/
+
+
+
+
 /*****************Announcements & News modal Start***************/
 .annsmntNewsPopupModal .modal-content{
   padding: 15px;
@@ -899,12 +950,15 @@ body {
 .newsPopupContentWrap .col-md-3:nth-child(4n+1){
   clear: both;
 }
+.annsmntNewsPopupModal .modal-content .modal-title{
+  color: #004a93;
+}
+
 .news-icon{
     text-align: center;
     border: 1px solid #eaebed;
     padding: 10px;
     margin-bottom: 20px;
-   /* min-height: 220px;*/
 }
 .news-icon:hover{
   background-color: #eaebed;
@@ -915,9 +969,25 @@ body {
   color:#242223;
   font-family: 'Montserrat', sans-serif;
 }
-.news-icon>a>img{
+.news-icon .icon{
   margin: auto;
- /* max-height: 75px;*/
+  max-width: 120px;
+  max-height: 120px;
+  width: 100%;
+  height: auto;
+}
+.news-icon p{
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+.annsmntNewsPopupModal .modal-footer{
+  text-align: center;
+  font-weight: 700;
+}
+@media screen and (max-width: 767px){
+  .newsPopupContentWrap .col-md-3:nth-child(2n+1){
+  clear: both;
+}
 }
 /*****************Announcements & News modal End***************/
 

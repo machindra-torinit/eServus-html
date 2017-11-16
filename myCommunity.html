@@ -168,63 +168,63 @@
 					</div>
 					<div class="col-xs-6 col-sm-3 col-md-3">
 						<div class="FeaturesBox">
-							<a id="socialFeedLink" href="javascript:void(0);"><img src="images/social.png" class="img-responsive" alt="Announcement">
+							<a id="socialFeedLink" href="javascript:void(0);"><img src="images/social.png" class="img-responsive" alt="Social Feed">
 							<p>Social Feed</p>
 							</a>
 						</div>
 					</div>
 					<div class="col-xs-6 col-sm-3 col-md-3">
 						<div class="FeaturesBox">
-							<a href="#"><img src="images/buletin.png" class="img-responsive" alt="Announcement">
+							<a href="#"><img src="images/buletin.png" class="img-responsive" alt="Bulletin Board">
 							<p>Bulletin Board</p>
 							</a>
 						</div>
 					</div>
 					<div class="col-xs-6 col-sm-3 col-md-3">
 						<div class="FeaturesBox">
-							<a href="#"><img src="images/b2b.png" class="img-responsive" alt="Announcement">
+							<a href="#"><img src="images/b2b.png" class="img-responsive" alt="Business Marketplace">
 							<p>Business Marketplace</p>
 							</a>
 						</div>
 					</div>
 					<div class="col-xs-6 col-sm-3 col-md-3">
 						<div class="FeaturesBox">
-							<a href="#"><img src="images/food.png" class="img-responsive" alt="Announcement">
+							<a href="#"><img src="images/food.png" class="img-responsive" alt="Food Delivery">
 							<p>Food Delivery</p>
 							</a>
 						</div>
 					</div>
 					<div class="col-xs-6 col-sm-3 col-md-3">
 						<div class="FeaturesBox">
-							<a href="#"><img src="images/grocery.png" class="img-responsive" alt="Announcement">
+							<a href="https://www.grocerygateway.com/store/" target="_blank"><img src="images/grocery.png" class="img-responsive" alt="Grocery Delivery">
 							<p>Grocery Delivery</p>
 							</a>
 						</div>
 					</div>
 					<div class="col-xs-6 col-sm-3 col-md-3">
 						<div class="FeaturesBox">
-							<a href="#"><img src="images/music.png" class="img-responsive" alt="Announcement">
+							<a href="#"><img src="images/music.png" class="img-responsive" alt="Music">
 							<p>Music</p>
 							</a>
 						</div>
 					</div>
 					<div class="col-xs-6 col-sm-3 col-md-3">
 						<div class="FeaturesBox">
-							<a href="#"><img src="images/quiz.png" class="img-responsive" alt="Announcement">
-							<p>Quizzes &amp; Polls</p>
+							<a href="#"><img src="images/quiz.png" class="img-responsive" alt="Suggestions">
+							<p>Suggestions</p>
 							</a>
 						</div>
 					</div>
 					<div class="col-xs-6 col-sm-6 col-md-6">
 						<div class="FeaturesBox">
-							<a href="#"><img src="images/tickets.png" class="img-responsive" alt="Announcement">
+							<a href="#"><img src="images/tickets.png" class="img-responsive" alt="Discounted Tickets">
 							<p>Discounted Tickets</p>
 							</a>
 						</div>
 					</div>
 					<div class="col-xs-6 col-sm-6 col-md-6">
 						<div class="FeaturesBox">
-							<a href="#"><img src="images/building.png" class="img-responsive" alt="Announcement">
+							<a href="#"><img src="images/building.png" class="img-responsive" alt="My Building">
 							<p>My Building</p>
 							</a>
 						</div>
@@ -606,9 +606,7 @@
 	          	<div class="clearfix">
 	          		<button type="button" class="close" data-dismiss="modal"><strong>&times;</strong></button>
 	          	</div>
-	          	<!-- <h4 class="modal-title text-center"><strong>All Event in March</strong></h4> -->
-	         
-	     
+	          	
 		        <div class="modal-body clearfix">
 		          	<div class="allEventPopupWrap">
 		          		<div class="eventListHeader">
@@ -633,7 +631,7 @@
 		          					<img src="images/Event-List-Pop-Up.png" alt="" class="img-responsive">
 		          				</div>
 		          			</div>
-		          			<div class="eventData">
+		          			<div class="eventData" data-toggle="modal" data-target="#EventDetailsPopup" data-dismiss="modal">
 		          				<div class="evevntDate"><span>3/20/2018 12:30AM</span>
 		          					<a href="#">Salad Club <i class="fa fa-angle-right" aria-hidden="true"></i></a>
 		          				</div>
@@ -670,6 +668,91 @@
 	</div>
 
 <!-- All Event this Month Popup Modal End -->
+
+
+<!-- Event Details Popup Modal Start -->	
+
+	<div class="EventDetailPopupModal">
+	  <div class="modal fade" id="EventDetailsPopup" role="dialog">
+	    <div class="modal-dialog modal-md">
+	    
+	    <!--   Modal content -->
+	      	<div class="modal-content">
+	      
+	          	<div class="clearfix">
+	          		<button type="button" class="close" data-dismiss="modal"><strong>&times;</strong></button>
+	          	</div>
+	          	
+		        <div class="modal-body clearfix">
+		          	<div class="EventDetailPopupWrap">
+		          		<div class="eventListHeader">
+		          			<div class="preEvent">
+		          				<a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i> Previous</a>
+		          			</div>
+		          			<div class="nextEvent">
+		          				<a href="#">Next <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+		          			</div>
+		          			<div class="eventTitle">
+		          				Salad Club
+		          			</div>
+
+		          			<div class="clearfix"></div>
+		          		</div>
+		          		<div class="eventDetailWrap">
+		          			<div class="eventDetailImg">
+		          				<img src="images/Event-List-Pop-Up_2.png" alt="" class="img-responsive">
+		          			</div>
+		          			<div class="eventDetailTxt">
+		          				<p>Date: Every Tuesday 12:30PM - 2:00PM</p>
+		          				<p>Join us every Tuesday on the 4th floor a communal meal. Bring two items to share (preferable one vegetable or fruit and one protein such as nuts or salmon) and participate in the step-up abd clean-up and you will experience one of the best lunches around. If thats not enough, then how about the unique opportunity to relax, discuss, and collaborate with fellow tenants!</p>
+		          				<p>See you for lunch!</p>
+		          			</div>
+		          			<div class="eventDetailBtn">
+					             <button type="button" class="lgBtn" data-toggle="modal" data-target="#goingBtnPopup" data-dismiss="modal">Going</button>
+					        </div>
+		          		</div>
+		          	</div>
+		        </div>
+		        
+	      	</div>
+	      
+	    </div>
+	  </div>
+	</div>
+
+<!-- Event Details Popup Modal End -->
+
+
+
+<!-- On Going Button See you soon Popup Modal Start -->	
+
+	<div class="goingBtnPopupModal">
+	  <div class="modal fade" id="goingBtnPopup" role="dialog">
+	    <div class="modal-dialog modal-md">
+	    
+	    <!--   Modal content -->
+	      	<div class="modal-content">
+	      
+	          	<div class="clearfix">
+	          		<button type="button" class="close" data-dismiss="modal"><strong>&times;</strong></button>
+	          	</div>
+	          	
+		        <div class="modal-body clearfix">
+		          	<div class="goingBtnPopupWrap">
+		          		<div class="seeYouSoonImg">
+		          			<img src="images/plane.png" alt="" class="">
+		          			<h3>See you soon!</h3>
+		          		</div>
+		          	</div>
+		        </div>
+		        
+	      	</div>
+	      
+	    </div>
+	  </div>
+	</div>
+
+<!-- On Going Button See you soon Popup Modal End -->
 
 
 
@@ -968,30 +1051,18 @@
     //for Responsive Tabs JS
       (function($) {
 
-		  'use strict';
-
 		  $(document).on('show.bs.tab', '.nav-tabs-responsive [data-toggle="tab"]', function(e) {
 		    var $target = $(e.target);
 		    var $tabs = $target.closest('.nav-tabs-responsive');
 		    var $current = $target.closest('li');
-		    var $parent = $current.closest('li.dropdown');
-				$current = $parent.length > 0 ? $parent : $current;
+		    
 		    var $next = $current.next();
 		    var $prev = $current.prev();
-		    var updateDropdownMenu = function($el, position){
-		      $el
-		      	.find('.dropdown-menu')
-		        .removeClass('pull-xs-left pull-xs-center pull-xs-right')
-		      	.addClass( 'pull-xs-' + position );
-		    };
 
 		    $tabs.find('>li').removeClass('next prev');
 		    $prev.addClass('prev');
 		    $next.addClass('next');
 		    
-		    updateDropdownMenu( $prev, 'left' );
-		    updateDropdownMenu( $current, 'center' );
-		    updateDropdownMenu( $next, 'right' );
 		  });
 
 		})(jQuery);

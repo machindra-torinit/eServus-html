@@ -9,7 +9,7 @@ body {
     width: 200px;
     font-size: 16px;
     padding: 12px;
-    background: #f8bc02;
+    background: #f0b511;
     border-radius: 25px;
     border: none;
     color: #fff;
@@ -204,12 +204,11 @@ header{
  }
 
 .navWrapper nav li> a:hover {
-  color: #f8bc02;
-  border-bottom: 3px solid #f8bc02;
+  color: #f0b511;
 }
 .navActive{
-  color: #f8bc02!important;
-  border-bottom: 3px solid #f8bc02;
+  color: #f0b511!important;
+  border-bottom: 3px solid #f0b511;
 }
 .menu-trigger {
     display:none;
@@ -412,11 +411,12 @@ header{
 }
 .pageTitle h2{
     margin-bottom: 20px;
+    text-align: center;
 }
 .titleBorder{
 	width: 60px;
 	margin: 0 auto;
-	border-bottom: 3px #f8bc02 solid;
+	border-bottom: 3px #f0b511 solid;
 }
 /*****for homepageBar section End******/
 
@@ -452,6 +452,48 @@ header{
 .communitySlider{
    margin-bottom: 85px;
 }
+@media screen and (max-width: 767px){
+  .communitySlider .container .col-md-8{
+     padding-left: 0px;
+     padding-right: 0px;
+  }
+  .sliderWrap .lSSlideOuter .lightSlider{
+    margin-bottom: 8%;
+    overflow: visible;
+  }
+  .sliderWrap ul>li .imgTxtWrap{
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    bottom: -9%;
+    right: 0;
+    opacity: 0.9;
+    max-height: 117px;
+   
+  }
+  .sliderWrap .lSSlideOuter .lSPager.lSGallery{
+    margin-top: 0px!important;
+    padding-left: 15px!important;
+    padding-right: 15px!important;
+  }
+  .sliderWrap .lSSlideOuter .lSPager.lSGallery img{
+    width: 100%!important;
+    height: 100%!important;
+  }
+  .sliderWrap .lSSlideOuter .lSPager.lSGallery li{
+    width: 70px!important;
+    height: 70px!important;
+    padding: 7px;
+  }
+  .sliderWrap .lSSlideOuter .lSPager.lSGallery li.active{
+    border-radius: 0px;
+    border-bottom: 3px solid #00539a;
+    
+  }
+  .homepageBar .pageTitle{
+    margin-bottom: 20px;
+  }
+}
 /***for Slider End*/
 
 
@@ -465,7 +507,7 @@ header{
 .fc-toolbar h2 {
     font-size: 14px;
     font-weight: 700;
-    color: #f8bc02;
+    color: #f0b511;
 
 }
 .fc-button{
@@ -474,7 +516,7 @@ header{
   border-radius: 0px;
   box-shadow: none;
   height: 1.4em!important;
-  color: #f8bc02;
+  color: #f0b511;
 }
 .fc-unthemed .fc-row{
   border: 0px;
@@ -525,7 +567,7 @@ header{
 }
 .createEventLink>a{
   text-decoration: none;
-  color: #f8bc02;
+  color: #f0b511;
   font-size: 16px;
   font-weight: 700;
 }
@@ -632,7 +674,7 @@ header{
 .morePostLink>a{
     margin-bottom: 20px;
     font-size: 14px;
-    color: #f8bc02;
+    color: #f0b511;
     padding: 0px 5px;
     text-decoration: none;
 }
@@ -715,7 +757,7 @@ header{
     font-family: 'Glyphicons Halflings';
     font-style: normal;
     font-weight: 400;
-    color: #f8bc02;
+    color: #f0b511;
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -789,7 +831,7 @@ header{
 }
 .tabDataTxt .txtSender>a{
     text-decoration: none;
-    color: #f8bc02;
+    color: #f0b511;
 }
 /*********Community Tabs End*********/
 .annoNewsWrap{
@@ -877,7 +919,7 @@ header{
 .evevntDateTime .dateEditLink>a,
 .evevntDateTime .edtTimeLink>a{
   text-decoration: none;
-  color: #f8bc02;
+  color: #f0b511;
 }
 .evevntDateTime .edtTimeLink{
   text-align: right;
@@ -887,15 +929,19 @@ header{
 
 
 /*****************All Events in Month modal Start***************/
-.allEventPopupModal .modal-content{
+.allEventPopupModal .modal-content,
+.EventDetailPopupModal .modal-content,
+.goingBtnPopupModal .modal-content{
     border-bottom:4px solid #337ab7;
     border-radius: 0px;
     padding: 20px;
     background-color: #f9f9f9;
 }
-.allEventPopupWrap .eventListHeader{
+.eventListHeader{
   text-align: center;
-  margin-bottom: 20px;
+  padding: 10px 70px 20px 35px;
+  margin: 0px -35px 10px;
+  background-color: #f0f3f5;
 }
 .eventListHeader .preEvent{
   float: left;
@@ -913,7 +959,7 @@ header{
 .eventListHeader .preEvent a,
 .eventListHeader .nextEvent a{
   text-decoration: none;
-  color: #f8bc02;
+  color: #f0b511;
 }
 .eventListWrap{
   max-height: 500px;
@@ -926,13 +972,43 @@ header{
   margin-bottom: 10px;
   text-align: center;
 }
-.eventListWrap .eventData .eventImg>img{
+.eventListWrap .eventData .eventImg>img,
+.eventDetailWrap .eventDetailImg>img{
   width: 100%;
   max-height: 155px;
 }
 .eventListWrap .eventData .evevntDate a{
   text-decoration: none;
-  color: #f8bc02;
+  color: #f0b511;
+}
+.eventDetailWrap .eventDetailImg{
+  margin-bottom: 20px;
+}
+.eventDetailWrap .eventDetailTxt>p{
+  margin-bottom: 20px;
+  text-align: justify;
+  line-height: 1.8;
+}
+.eventDetailBtn{
+  text-align: center;
+}
+.goingBtnPopupModal .modal-body{
+  min-height: 300px;
+  /*display: table;*/
+}
+.goingBtnPopupWrap {
+    /*display: table-cell;
+    vertical-align: middle;*/   
+}
+.seeYouSoonImg{
+  text-align: center;
+  color: #004a93;
+  margin-top: 12%;
+  font-weight: 700;
+}
+.seeYouSoonImg>img{
+  width: 120px;
+  height: 65px;
 }
 /*****************All Events in Month modal End***************/
 
@@ -997,6 +1073,9 @@ header{
 
 
 /*****************My Building Start***************/
+.BuildingWrapper{
+  margin-top: 158px;
+}
 #rotating-item-wrapper {
   position: relative;
   width: 980px;
@@ -1015,4 +1094,248 @@ header{
   margin-top: 10px;
   margin-bottom: 30px;
 }
+
+
 /*****************My Building End***************/
+
+
+/*****************Building Tab Start***************/
+
+
+/*****************breadcrumb Navigation Start***************/
+
+.breadcrumbCover .breadcrumb{
+    list-style: none;
+    background: none;
+    padding: 0px;
+    border-radius: 0px;
+}
+.breadcrumbCover .breadcrumb li {
+    display: inline;
+}
+.breadcrumbCover .breadcrumb li+li:before {
+    padding: 3px;
+    color: #818181;
+    font-family: 'FontAwesome';
+    content: "\f105";
+}
+.breadcrumbCover .breadcrumb li a {
+    color: #818181;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+}
+.breadcrumbCover .breadcrumb li a.activeBread{
+    color: #474646;
+    text-decoration: none;
+}
+
+/*****************breadcrumb Navigation End***************/
+.buildingTabWrap,
+.ServiceFacilityTab{
+  color: #474646;
+  font-family:'MontserratRegular';
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+.buildingTabWrap .container{
+  width: 70%;
+}
+.buildingTabWrap .pageTitle h1,
+.ServiceFacilityTab .pageTitle h1{
+  font-weight: 700;
+  color: #474646;
+  text-align: center;
+}
+.ServiceFacilityTab .pageTitle{
+  margin-bottom: 40px;
+}
+.buildTabContent h2{
+  font-family:'MontserratBold';
+  font-weight: 700;
+  color: #004a93;
+  text-align: center;
+}
+.buildTabContent .amenties p{
+  font-family:'MontserratBold';
+  font-weight: 700;
+}
+.buildTabContent .amenties ul{
+  padding-left: 70px;
+}
+.buildTabContent .amenties ul li{
+ margin-bottom: 20px;
+}
+.downloadLinkWrap{
+  text-align: center;
+  color: #004a93;
+  font-size: 22px;
+  font-weight: 700;
+}
+.downloadLinkWrap .downloadTxt{
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.downloadLinkWrap p>a{
+  color: #f0b511;
+  font-size: 22px;
+  font-weight: normal;
+  text-decoration: none;
+}
+/*****************Building Tab End***************/
+
+
+/*****************Parking Tab Start***************/
+.parkingTab{
+  color: #474646;
+  font-family:'MontserratRegular';
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+.parkingTab .pageTitle h1{
+  font-weight: 700;
+  color: #474646;
+  text-align: center;
+}
+.parkingTabContent>h2{
+  font-family:'MontserratBold';
+  font-weight: 700;
+  color: #004a93;
+  text-align: center;
+}
+.parkingTabContent .parkInfo p{
+  font-family:'MontserratBold';
+  font-weight: 700;
+}
+.parkingTabContent .parkInfo ul{
+  padding-left: 70px;
+}
+.parkingTabContent .parkInfo ul li{
+ margin-bottom: 20px;
+}
+.parkingTabContent .pakrFootTxt{
+  font-family:'MontserratBold';
+  font-weight: 700;
+}
+/*****************Parking Tab End***************/
+
+
+/*****************Accessibility Tab Start***************/
+.AccessibilityTab{
+  color: #474646;
+  font-family:'MontserratRegular';
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+.AccessibilityTab .pageTitle{
+  margin-bottom: 40px;
+}
+.AccessibilityTab .pageTitle h1{
+  font-weight: 700;
+  color: #474646;
+  text-align: center;
+}
+.AccessibilityContent h2{
+  font-family:'MontserratBold';
+  font-weight: 700;
+  color: #004a93;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+.AccessibilityContent .whatAODA,
+.AccessibilityContent .commitment{
+  margin-bottom: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.downloadsWrap{
+  max-width: 70%;
+  margin: 0 auto;
+}
+.downloadsWrap .downloads{
+  text-align: center;
+  color: #004a93;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+
+.downloadsWrap .downloads a{
+  text-decoration: none;
+  color: #f0b511;
+}
+/*****************Accessibility Tab End***************/
+
+
+/*****************Contact Tab Start***************/
+.contactTab{
+  color: #474646;
+  font-family:'MontserratRegular';
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+.contactTab .pageTitle{
+  margin-bottom: 40px;
+}
+.contactTab .pageTitle h1{
+  font-weight: 700;
+  color: #474646;
+  text-align: center;
+}
+.contactTabCont h2{
+  color: #004a93;
+  font-weight: 700;
+  text-align: center;
+}
+.contactTbl caption{
+  color: #004a93;
+  font-weight: 700;
+  text-align: left;
+}
+.contactTbl{
+  border-top: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+.contactTbl>tbody>tr>td, .contactTbl>tbody>tr>th{
+  border-top: 0px;
+}
+.contactTbl>thead>tr>th{
+  border-bottom: 0px;
+  vertical-align: top;
+}
+.contactTbl>tbody>tr>td>a{
+  text-decoration: none;
+  color: #f0b511;
+}
+/*****************Contact Tab End***************/
+
+
+/*****************Policies & Lagal Tab Start***************/
+.PoliciesContent{
+  color: #474646;
+  font-family:'MontserratRegular';
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+.PoliciesContent h2{
+  text-align: center;
+}
+.PoliciesContent h3,
+.PoliciesContent h2{
+  color: #004a93;
+  font-weight: 700;
+}
+.PoliciesContent p{
+  margin-bottom: 30px;
+}
+.PoliciesContent p>a{
+  text-decoration: none;
+  color: #f0b511;
+}
+@media screen and (max-width: 767px){
+  .PoliciesContent{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+/*****************Policies & Lagal Tab End***************/

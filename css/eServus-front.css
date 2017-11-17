@@ -2,7 +2,8 @@
 body {
   	font-size: 14px;
    	font-weight: 500;
-    color:#242223;
+   /* color:#242223;*/
+    color:#474646;
   	font-family: 'Montserrat', sans-serif;
 }
 .lgBtn {
@@ -46,7 +47,7 @@ header{
     min-width: 100px;  
 }
 .headSearch .form-control{
-	padding: 9px 15px;
+	 padding: 9px 30px 9px 15px;
     color: #999;
     width: 100%;
     height: 38px;
@@ -198,7 +199,7 @@ header{
 	  text-transform: uppercase;
 	  font-size: 12px;
 	  font-style: normal;
-	 font-weight: 500;
+	 font-weight: 700;
 	line-height: 20px;
 	padding: 15px 20px;
  }
@@ -399,19 +400,17 @@ header{
     line-height: 66px;
 }
 
-.homepageBar .pageTitle,
-.socialFeedWrap .pageTitle,
-.annoNewsWrap .pageTitle{
-	color: #1e1c1d;
+.pageTitle,
+.pageTitle,
+.pageTitle{
     font-size: 24px;
-    font-weight: 500;
-    text-align: center;
     margin-bottom: 45px;
     
 }
 .pageTitle h2{
     margin-bottom: 20px;
     text-align: center;
+    font-weight: 700;
 }
 .titleBorder{
 	width: 60px;
@@ -994,11 +993,6 @@ header{
 }
 .goingBtnPopupModal .modal-body{
   min-height: 300px;
-  /*display: table;*/
-}
-.goingBtnPopupWrap {
-    /*display: table-cell;
-    vertical-align: middle;*/   
 }
 .seeYouSoonImg{
   text-align: center;
@@ -1011,6 +1005,47 @@ header{
   height: 65px;
 }
 /*****************All Events in Month modal End***************/
+
+
+/*****************Food Delivery modal Start***************/
+@media screen and (min-width: 768px){
+  .foodDeliPopupModal .modal-sm,
+  .musicPopupModal .modal-sm,
+  .suggestionPopupModal .modal-sm{
+      width: 400px;
+  }
+}
+
+.foodDeliPopupModal .modal-content{
+    border-bottom:4px solid #337ab7;
+    border-radius: 0px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/*****************Food Delivery modal End***************/
+
+
+/*****************Music modal Start***************/
+.musicPopupModal .modal-content{
+    border-bottom:4px solid #337ab7;
+    border-radius: 0px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/*****************Music modal End***************/
+
+
+/*****************Suggestions modal Start***************/
+.suggestionPopupModal .modal-content{
+    border-bottom:4px solid #337ab7;
+    border-radius: 0px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/*****************Suggestions modal End***************/
 
 
 
@@ -1099,7 +1134,8 @@ header{
 /*****************My Building End***************/
 
 
-/*****************Building Tab Start***************/
+
+/*****************Building and Services Facilities Tab Start***************/
 
 
 /*****************breadcrumb Navigation Start***************/
@@ -1131,37 +1167,30 @@ header{
 }
 
 /*****************breadcrumb Navigation End***************/
-.buildingTabWrap,
-.ServiceFacilityTab{
-  color: #474646;
-  font-family:'MontserratRegular';
-  font-size: 20px;
+.buildingTabWrap{
   margin-bottom: 40px;
+  font-size: 16px;
 }
-.buildingTabWrap .container{
-  width: 70%;
+.buildingTabWrap .pageTitle{
+  margin-bottom: 35px;
 }
-.buildingTabWrap .pageTitle h1,
-.ServiceFacilityTab .pageTitle h1{
-  font-weight: 700;
-  color: #474646;
-  text-align: center;
+.buildingTabWrap .pageTitle h2{
+    margin-top: 0px;
 }
-.ServiceFacilityTab .pageTitle{
-  margin-bottom: 40px;
+.buildingTabWrap .buildTabContent{
+  max-width: 85%;
+  margin: 0 auto;
 }
-.buildTabContent h2{
-  font-family:'MontserratBold';
+.buildTabContent h3{
   font-weight: 700;
   color: #004a93;
   text-align: center;
 }
 .buildTabContent .amenties p{
-  font-family:'MontserratBold';
   font-weight: 700;
 }
 .buildTabContent .amenties ul{
-  padding-left: 70px;
+  padding-left: 60px;
 }
 .buildTabContent .amenties ul li{
  margin-bottom: 20px;
@@ -1169,79 +1198,176 @@ header{
 .downloadLinkWrap{
   text-align: center;
   color: #004a93;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 700;
 }
 .downloadLinkWrap .downloadTxt{
-  font-size: 28px;
+  font-size: 24px;
   margin-bottom: 20px;
 }
 .downloadLinkWrap p>a{
   color: #f0b511;
-  font-size: 22px;
-  font-weight: normal;
+  font-size: 16px;
   text-decoration: none;
 }
-/*****************Building Tab End***************/
+.downloadLinkWrap p>img{
+  max-width: 70px;
+}
+/*****************Building and Services Facilities Tab End***************/
+
+
+/*****************Tenant Directory Tab Start***************/
+.tenantDirContent{
+
+}
+
+.catSearchWrap .tenantCat, .catSearchWrap .tenantSrch{
+  display: inline-block;
+  width: 47%;
+  margin-bottom: 30px;
+}
+.catSearchWrap .tenantCat{
+  text-align: right;
+}
+.catSearchWrap .tenantSrch{
+  text-align: left;
+  margin-left: 25px;
+  position: relative;
+}
+.tenantCat select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("../images/down_arrow.svg");
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    height: 35px;
+    width: 220px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    margin-left: 6px;
+}
+.tenantSrch input, .tenantSrch input:focus{
+  height: 35px;
+  width: 220px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  position: relative;
+  padding: 2px 28px 2px 15px;
+}
+.tenantSrch .fa-search{
+    position: absolute;
+    top: 7px;
+    left: 190px;
+    color: #ccc;
+    font-size: 18px;
+    font-weight: 700;
+}
+.tanantDirTblWrap{
+    height:500px;
+    overflow-y:auto;
+  }
+.tanantDirTblWrap .scrollbot-outer-parent{
+    z-index: 2!important;
+  }
+.tanantDirTblWrap .scrollbot-scrollbar{
+    background-color: #f0b511!important;
+    border-radius: 5px;
+  }
+.tanantDirTbl>tbody>tr>td:first-child{
+  color: #004a93;
+  font-weight: 700;
+}
+.tanantDirTbl>thead>tr>th{
+  border-bottom: 0px;
+  vertical-align: top;
+  color: #599bfc;
+}
+.advertiseHere{
+  min-height: 180px;
+  background-color: #eaebed;
+  padding: 70px 5px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 700;
+}
+@media screen and (max-width: 767px){
+  .catSearchWrap .tenantCat, .catSearchWrap .tenantSrch{
+    display: block;
+    width: 100%;
+  }
+  .catSearchWrap .tenantCat{
+    text-align: left;
+    margin-left: 25px;
+  }
+}
+/*****************Tenant Directory Tab Start***************/
+
+
+
+/*****************Security Tab Start***************/
+.buildingTabWrap .securityContent{
+  max-width: 85%;
+  margin: 0 auto;
+  font-size: 15px;
+}
+.securityContent h3{
+  font-weight: 700;
+  color: #004a93;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.securityContent>p{
+  margin-bottom: 40px;
+}
+/*****************Security Tab Start***************/
 
 
 /*****************Parking Tab Start***************/
-.parkingTab{
-  color: #474646;
-  font-family:'MontserratRegular';
-  font-size: 20px;
-  margin-bottom: 40px;
+.buildingTabWrap .parkingTabContent{
+  max-width: 85%;
+  margin: 0 auto;
+  font-size: 16px;
 }
-.parkingTab .pageTitle h1{
-  font-weight: 700;
-  color: #474646;
-  text-align: center;
-}
-.parkingTabContent>h2{
-  font-family:'MontserratBold';
+.parkingTabContent>h3{
   font-weight: 700;
   color: #004a93;
   text-align: center;
 }
 .parkingTabContent .parkInfo p{
-  font-family:'MontserratBold';
   font-weight: 700;
 }
 .parkingTabContent .parkInfo ul{
   padding-left: 70px;
 }
 .parkingTabContent .parkInfo ul li{
- margin-bottom: 20px;
+ margin-bottom: 16px;
+}
+.parkingTabContent .parkInfo ul li>a{
+  color: #f0b511;
+  text-decoration: none;
 }
 .parkingTabContent .pakrFootTxt{
-  font-family:'MontserratBold';
   font-weight: 700;
 }
 /*****************Parking Tab End***************/
 
 
 /*****************Accessibility Tab Start***************/
-.AccessibilityTab{
-  color: #474646;
-  font-family:'MontserratRegular';
-  font-size: 20px;
-  margin-bottom: 40px;
+.buildingTabWrap .AccessibilityContent{
+  max-width: 85%;
+  margin: 0 auto;
+  font-size: 16px;
 }
-.AccessibilityTab .pageTitle{
-  margin-bottom: 40px;
-}
-.AccessibilityTab .pageTitle h1{
-  font-weight: 700;
-  color: #474646;
-  text-align: center;
-}
-.AccessibilityContent h2{
-  font-family:'MontserratBold';
+.AccessibilityContent h3{
   font-weight: 700;
   color: #004a93;
   text-align: center;
   margin-top: 0px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .AccessibilityContent .whatAODA,
 .AccessibilityContent .commitment{
@@ -1250,45 +1376,54 @@ header{
   padding-right: 15px;
 }
 .downloadsWrap{
-  max-width: 70%;
+  max-width: 75%;
   margin: 0 auto;
 }
 .downloadsWrap .downloads{
+  margin-bottom: 30px; 
   text-align: center;
-  color: #004a93;
-  margin-bottom: 30px;
-  padding: 10px;
 }
-
+.downloadsWrap .downloads p{
+  color: #004a93;
+  font-size: 16px;
+  font-weight: 700;
+}
 .downloadsWrap .downloads a{
   text-decoration: none;
   color: #f0b511;
+  font-size: 14px;
+  font-weight: 700;
+}
+.downloadsWrap .downloads img{
+  max-width: 70px;
+}
+@media screen and (min-width: 767px){
+  .downloadsWrap .col-xs-6:nth-child(3n+1){
+    clear: both;
+  }
+}
+@media screen and (max-width: 767px){
+  .downloadsWrap .col-xs-6:nth-child(2n+1){
+    clear: both;
+  }
 }
 /*****************Accessibility Tab End***************/
 
 
 /*****************Contact Tab Start***************/
-.contactTab{
-  color: #474646;
-  font-family:'MontserratRegular';
-  font-size: 20px;
-  margin-bottom: 40px;
+.buildingTabWrap .contactTabCont{
+  max-width: 85%;
+  margin: 0 auto;
+  font-size: 14px;
 }
-.contactTab .pageTitle{
-  margin-bottom: 40px;
-}
-.contactTab .pageTitle h1{
-  font-weight: 700;
-  color: #474646;
-  text-align: center;
-}
-.contactTabCont h2{
+.contactTabCont h3{
   color: #004a93;
   font-weight: 700;
   text-align: center;
 }
 .contactTbl caption{
   color: #004a93;
+   font-size: 18px;
   font-weight: 700;
   text-align: left;
 }
@@ -1311,17 +1446,16 @@ header{
 
 
 /*****************Policies & Lagal Tab Start***************/
-.PoliciesContent{
-  color: #474646;
-  font-family:'MontserratRegular';
-  font-size: 20px;
-  margin-bottom: 40px;
+.buildingTabWrap .PoliciesContent{
+  max-width: 85%;
+  margin: 0 auto;
+  font-size: 15px;
 }
-.PoliciesContent h2{
+.PoliciesContent h3{
   text-align: center;
 }
-.PoliciesContent h3,
-.PoliciesContent h2{
+.PoliciesContent h4,
+.PoliciesContent h3{
   color: #004a93;
   font-weight: 700;
 }

@@ -159,70 +159,70 @@
 		<div class="commFeatures">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-6 col-sm-3 col-md-3">
+					<div class="col-xs-6 col-sm-3">
 						<div class="FeaturesBox">
 							<a id="announcementLink" href="javascript:void(0);"><img src="images/announcement.png" class="img-responsive" alt="Announcement">
 							<p>Announcements</p>
 							</a>
 						</div>
 					</div>
-					<div class="col-xs-6 col-sm-3 col-md-3">
+					<div class="col-xs-6 col-sm-3">
 						<div class="FeaturesBox">
 							<a id="socialFeedLink" href="javascript:void(0);"><img src="images/social.png" class="img-responsive" alt="Social Feed">
 							<p>Social Feed</p>
 							</a>
 						</div>
 					</div>
-					<div class="col-xs-6 col-sm-3 col-md-3">
+					<div class="col-xs-6 col-sm-3">
 						<div class="FeaturesBox">
 							<a href="#"><img src="images/buletin.png" class="img-responsive" alt="Bulletin Board">
 							<p>Bulletin Board</p>
 							</a>
 						</div>
 					</div>
-					<div class="col-xs-6 col-sm-3 col-md-3">
+					<div class="col-xs-6 col-sm-3">
 						<div class="FeaturesBox">
 							<a href="#"><img src="images/b2b.png" class="img-responsive" alt="Business Marketplace">
 							<p>Business Marketplace</p>
 							</a>
 						</div>
 					</div>
-					<div class="col-xs-6 col-sm-3 col-md-3">
+					<div class="col-xs-6 col-sm-3">
 						<div class="FeaturesBox">
-							<a href="#"><img src="images/food.png" class="img-responsive" alt="Food Delivery">
+							<a href="#" data-toggle="modal" data-target="#foodDeliPopup"><img src="images/food.png" class="img-responsive" alt="Food Delivery">
 							<p>Food Delivery</p>
 							</a>
 						</div>
 					</div>
-					<div class="col-xs-6 col-sm-3 col-md-3">
+					<div class="col-xs-6 col-sm-3">
 						<div class="FeaturesBox">
 							<a href="https://www.grocerygateway.com/store/" target="_blank"><img src="images/grocery.png" class="img-responsive" alt="Grocery Delivery">
 							<p>Grocery Delivery</p>
 							</a>
 						</div>
 					</div>
-					<div class="col-xs-6 col-sm-3 col-md-3">
+					<div class="col-xs-6 col-sm-3">
 						<div class="FeaturesBox">
-							<a href="#"><img src="images/music.png" class="img-responsive" alt="Music">
+							<a href="#" data-toggle="modal" data-target="#musicPopup"><img src="images/music.png" class="img-responsive" alt="Music">
 							<p>Music</p>
 							</a>
 						</div>
 					</div>
-					<div class="col-xs-6 col-sm-3 col-md-3">
+					<div class="col-xs-6 col-sm-3">
 						<div class="FeaturesBox">
-							<a href="#"><img src="images/quiz.png" class="img-responsive" alt="Suggestions">
+							<a href="#" data-toggle="modal" data-target="#suggestionPopup"><img src="images/quiz.png" class="img-responsive" alt="Suggestions">
 							<p>Suggestions</p>
 							</a>
 						</div>
 					</div>
-					<div class="col-xs-6 col-sm-6 col-md-6">
+					<div class="col-xs-6">
 						<div class="FeaturesBox">
 							<a href="#"><img src="images/tickets.png" class="img-responsive" alt="Discounted Tickets">
 							<p>Discounted Tickets</p>
 							</a>
 						</div>
 					</div>
-					<div class="col-xs-6 col-sm-6 col-md-6">
+					<div class="col-xs-6">
 						<div class="FeaturesBox">
 							<a href="#"><img src="images/building.png" class="img-responsive" alt="My Building">
 							<p>My Building</p>
@@ -754,6 +754,105 @@
 
 <!-- On Going Button See you soon Popup Modal End -->
 
+
+<!-- Food Delivery Popup Modal Start -->	
+
+	<div class="foodDeliPopupModal">
+	  <div class="modal fade" id="foodDeliPopup" role="dialog">
+	    <div class="modal-dialog modal-sm">
+	    
+	    <!--   Modal content -->
+	      	<div class="modal-content">
+	      
+	          	<div class="clearfix">
+	          		<button type="button" class="close" data-dismiss="modal"><strong>&times;</strong></button>
+	          	</div>
+	          	
+		        <div class="modal-body clearfix">
+		          	<div class="foodDeliPopupWrap">
+		          		<div class="foodHeader">
+		          			<img src="images/ubereats_logo.png" class="img-responsive">
+		          		</div>
+		          		<div class="foodEmail">
+		          			<input type="text" name="email" class="form-control" placeholder="Enter your email address">
+		          		</div>
+		          		<div class="foodPass">
+		          			<input type="text" name="password" class="form-control" placeholder="Enter a password">
+		          		</div>
+		          		<div class="forgotPass clearfix">
+		          			<div class="pull-left"><input type="checkbox" name="remember"> Remember me</div>
+		          			<div class="pull-right"><a href="#">Forgot password?</a></div>
+		          		</div>
+		          		<div class="foodLoginBtn">
+		          			<button class="lgBtn">Login in</button>
+		          		</div>
+		          		<p>Don't have an account? <a href="#">Sign up with Eservus and get 30% off ></a></p>
+		          	</div>
+		        </div>
+		        
+	      	</div>
+	      
+	    </div>
+	  </div>
+	</div>
+
+<!-- Food Delivery Popup Modal End -->
+
+
+<!-- Music Popup Modal Start -->	
+
+	<div class="musicPopupModal">
+	  <div class="modal fade" id="musicPopup" role="dialog">
+	    <div class="modal-dialog modal-sm">
+	    
+	    <!--   Modal content -->
+	      	<div class="modal-content">
+	      
+	          	<div class="clearfix">
+	          		<button type="button" class="close" data-dismiss="modal"><strong>&times;</strong></button>
+	          	</div>
+	          	
+		        <div class="modal-body clearfix">
+		          	<div class="musicPopupWrap">
+		          		
+		          	</div>
+		        </div>
+		        
+	      	</div>
+	      
+	    </div>
+	  </div>
+	</div>
+
+<!-- Music Popup Modal End -->
+
+
+<!-- Suggestions Popup Modal Start -->	
+
+	<div class="suggestionPopupModal">
+	  <div class="modal fade" id="suggestionPopup" role="dialog">
+	    <div class="modal-dialog modal-sm">
+	    
+	    <!--   Modal content -->
+	      	<div class="modal-content">
+	      
+	          	<div class="clearfix">
+	          		<button type="button" class="close" data-dismiss="modal"><strong>&times;</strong></button>
+	          	</div>
+	          	
+		        <div class="modal-body clearfix">
+		          	<div class="suggestionPopupWrap">
+		          		
+		          	</div>
+		        </div>
+		        
+	      	</div>
+	      
+	    </div>
+	  </div>
+	</div>
+
+<!-- Suggestions Popup Modal End -->
 
 
 <!-- Announcements & News Popup Modal Start -->	

@@ -584,23 +584,23 @@ header{
     padding-right: 10px;
     padding-left: 10px;
 }
-.FeaturesBox{
-	text-align: center;
-    border: 1px solid #eaebed;
-    padding: 40px 0px;
-    margin-bottom: 20px;
-    min-height: 220px;
-}
-.FeaturesBox:hover{
-	background-color: #eaebed;
-}
-.FeaturesBox>a{
+.FeaturesBoxWrap>a{
   text-decoration: none;
   font-size: 14px;
   color:#242223;
   font-family: 'Montserrat', sans-serif;
 }
-.FeaturesBox>a>img{
+.FeaturesBox:hover{
+  background-color: #eaebed;
+}
+.FeaturesBox{
+  text-align: center;
+    border: 1px solid #eaebed;
+    padding: 40px 0px;
+    margin-bottom: 20px;
+    min-height: 220px;
+}
+.FeaturesBox img{
 	margin: auto auto 30px;
   max-height: 75px;
 }

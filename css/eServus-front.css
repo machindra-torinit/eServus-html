@@ -1255,7 +1255,8 @@ header{
   padding: 15px 10px;
   text-align: right;
 }
-.contPosterLink>a{
+.contPosterLink>a,
+.bbPostTxt a{
   text-decoration: none;
   color: #f0b511;
   font-size: 14px;
@@ -1430,24 +1431,7 @@ header{
 .buildTabContent .amenties ul li{
  margin-bottom: 20px;
 }
-.downloadLinkWrap{
-  text-align: center;
-  color: #004a93;
-  font-size: 18px;
-  font-weight: 700;
-}
-.downloadLinkWrap .downloadTxt{
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-.downloadLinkWrap p>a{
-  color: #f0b511;
-  font-size: 16px;
-  text-decoration: none;
-}
-.downloadLinkWrap p>img{
-  max-width: 70px;
-}
+
 /*****************Building and Services Facilities Tab End***************/
 
 
@@ -1613,10 +1597,13 @@ header{
 .downloadsWrap{
   max-width: 75%;
   margin: 0 auto;
+  text-align: center;
 }
 .downloadsWrap .downloads{
   margin-bottom: 30px; 
   text-align: center;
+  width: 32%;
+  display: inline-block;
 }
 .downloadsWrap .downloads p{
   color: #004a93;
@@ -1632,16 +1619,13 @@ header{
 .downloadsWrap .downloads img{
   max-width: 70px;
 }
-@media screen and (min-width: 767px){
-  .downloadsWrap .col-xs-6:nth-child(3n+1){
-    clear: both;
-  }
-}
 @media screen and (max-width: 767px){
-  .downloadsWrap .col-xs-6:nth-child(2n+1){
-    clear: both;
+  .downloadsWrap .downloads{
+    width: 49%;
+    
   }
 }
+
 /*****************Accessibility Tab End***************/
 
 

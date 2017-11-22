@@ -359,30 +359,14 @@
 	<script src="js/scrollreveal.min.js"></script>
 	<script src="js/scrollbot.min.js"></script>
    
-    <script type="text/javascript">
+   	<script type="text/javascript">
+   		//for Scroll effect JS on Tenant Directory Tab
+		$(document).ready(function() {
+			
+			var tanantDirTblScroll = new scrollbot(".tanantDirTblWrap");
+		});
 
-    //Mobile Navigation JS
-      $(document).ready(function() {
-		  $('.menu-trigger').click(function() {
-		    $('nav ul').slideToggle(50);
-		  });//end slide toggle
-		});//end ready
-      	
-      	//for Active Navigation Tab
-	        $('.navWrapper nav li>a').click(function(){
-	          $('.navWrapper nav li>a').removeClass("navActive");
-	          $(this).addClass("navActive");
-	      });
-
-		//for Scroll effect JS
-		var tanantDirTblScroll = new scrollbot(".tanantDirTblWrap");//.setStyle({"z-index":"2"}); 
-
-		// custom2 = new scrollbot(".custom-scroll-2",10).setStyle({
-		// 	"background":"#202020",
-		// 	"z-index":"2"
-		// },{
-		// 	"background":"#ff0"
-		// });  
-    </script>
+   	</script>
+   	<script src='js/eServusFront.js'></script>
 </body>
 </html>

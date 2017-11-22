@@ -1,14 +1,17 @@
 
 body {
   	font-size: 14px;
-   	font-weight: 500;
-   /* color:#242223;*/
     color:#474646;
-  	font-family: 'Montserrat', sans-serif;
+  	font-family: 'Montserrat';
+}
+.row [class*="col-"]{
+    padding-right: 10px;
+    padding-left: 10px;
 }
 .lgBtn {
     width: 200px;
     font-size: 16px;
+    font-weight: 700;
     padding: 12px;
     background: #f0b511;
     border-radius: 25px;
@@ -157,6 +160,11 @@ header{
 	.headerWrap .header-logo{
 		float: right;
 	}
+  .headerWrap{
+      padding-top: 28px;
+      padding-bottom: 28px;
+      border-bottom: 0px #e0e1e4 solid;
+  }
 }
 @media screen and (max-width: 350px) {
 	.cart-area .notification-block{
@@ -171,10 +179,8 @@ header{
     background-color: #004a93;
     min-height: 53px;
 }
-
-
 .navWrapper nav {
- 	width: 380px;
+ 	  width: 410px;
     margin: 0 auto;
     min-height: 45px;
 }
@@ -303,7 +309,7 @@ header{
     display: block;
 }
 .footerLinks li>a{
-	color: #2c2a2b;
+	color: #474646;
     font-size: 14px;
     font-weight: 700;
     text-decoration: none;
@@ -322,17 +328,18 @@ header{
 .footerSocial .contact-details {
     margin-top: 12px;
     line-height: 24px;
+    font-weight: normal;
 }
 .footerSocial .contact-details>a {
 	text-decoration: none;
-	color: #2c2a2b;
+	color: #474646;
 }
 .newsletter .newsletterInfo {
     margin-bottom: 20px;
 }
 .newsletter input.form-control {
     height: 50px;
-    padding: 6px 12px;
+    padding: 6px 75px 6px 12px;
 }
 .newsletter .input-group{
 	position: relative;
@@ -340,14 +347,15 @@ header{
 }
 .newsletter .input-group .SignUpBtn {
    position: absolute;
-    right: 4px;
-    top: 15%;
+    right: 8px;
+    top: 14px;
     z-index: 10;
    
 }
 .newsletter .input-group .SignUpBtn button{
 	background-color: #fff;
    color: #004a93;
+   font-weight: 700;
    border: 0;
 }
 .newsletter .pricavy-details {
@@ -393,15 +401,12 @@ header{
     max-width: 620px;
 }
 .homepageBar .streetCount h3 {
-    color: #818181;
+    color: #90949c;
     font-size: 24px;
     font-weight: 700;
     margin: 0;
     line-height: 66px;
 }
-
-.pageTitle,
-.pageTitle,
 .pageTitle{
     font-size: 24px;
     margin-bottom: 45px;
@@ -433,11 +438,11 @@ header{
   position: absolute;
   bottom: 0;
   left: 0;
-  color: #00539a;
+  color: #5b9bff;
   z-index: 10;
   font-size: 14px;
   background-color: #fff;
-  border-bottom: 3px solid #00539a;
+  border-bottom: 3px solid #5b9bff;
   opacity: 0.8;
   padding: 10px;
   width: 100%;
@@ -498,18 +503,18 @@ header{
 
 /***for Calender Start*/
 
-.fc-toolbar.fc-header-toolbar {
+.calenderWrap .fc-toolbar.fc-header-toolbar {
     margin-bottom: 10px; 
     padding: 5px 0px;
     border-bottom: 1px solid #ddd;
 }
-.fc-toolbar h2 {
+.calenderWrap .fc-toolbar h2 {
     font-size: 14px;
     font-weight: 700;
     color: #f0b511;
 
 }
-.fc-button{
+.calenderWrap .fc-button{
   border: none;
   background: none;
   border-radius: 0px;
@@ -517,10 +522,10 @@ header{
   height: 1.4em!important;
   color: #f0b511;
 }
-.fc-unthemed .fc-row{
+.calenderWrap .fc-unthemed .fc-row{
   border: 0px;
 }
-.fc td, .fc th {
+.calenderWrap .fc td, .calenderWrap .fc th {
     border-style: solid;
     border-width: 0px;
     padding: 0;
@@ -528,26 +533,24 @@ header{
     vertical-align: middle;
     font-size: 12px;
     font-weight: 700;
-    /*color: #9ca4ab;*/
-
 }
-.fc th { 
+.calenderWrap .fc th { 
  
   text-transform: uppercase;
 }
-.fc-head-container{
+.calenderWrap .fc-head-container{
   padding-bottom: 15px!important;
 }
-.fc-basic-view .fc-body .fc-row {
+.calenderWrap .fc-basic-view .fc-body .fc-row {
     min-height: 2.2em;
 }
-.fc-basic-view .fc-body .fc-row:last-child{
+.calenderWrap .fc-basic-view .fc-body .fc-row:last-child{
     display: none;
 }
-.fc-ltr .fc-basic-view .fc-day-top .fc-day-number {
+.calenderWrap .fc-ltr .fc-basic-view .fc-day-top .fc-day-number {
     float: none;
 }
-.fc-scroller{
+.calenderWrap .fc-scroller{
   overflow-x: visible;
 }
 @media screen and (max-width: 991px){
@@ -587,15 +590,15 @@ header{
 .FeaturesBoxWrap>a{
   text-decoration: none;
   font-size: 14px;
-  color:#242223;
-  font-family: 'Montserrat', sans-serif;
+  color:#474646;
+  font-weight: 700;
 }
 .FeaturesBox:hover{
-  background-color: #eaebed;
+  background-color: #e4e8eb;
 }
 .FeaturesBox{
   text-align: center;
-    border: 1px solid #eaebed;
+    border: 1px solid #e4e8eb;
     padding: 40px 0px;
     margin-bottom: 20px;
     min-height: 220px;
@@ -653,6 +656,9 @@ header{
 .sociFeedContentWrap .sociFeedContent:last-of-type{
     margin-bottom: 0px;
     border-bottom: 0px;
+}
+.sociFeedContTxt{
+  font-weight: 700;
 }
 .sociFeedContTxt .sociTxt{
     margin-top: 10px;
@@ -811,8 +817,9 @@ header{
 }
 
 .Announcements-tabs .nav-tabs>li>a {
-    color: #6d6d6d;
+    color: #90949c;
     font-size: 12px;
+    font-weight: 700;
 }
 .Announcements-tabs .nav>li>a:focus, .Announcements-tabs .nav>li>a:hover {
      background-color: transparent; 
@@ -821,9 +828,10 @@ header{
      border-color: transparent; 
 }
 .tabDataWrap .tabDataContent {
-  padding: 15px 0px;
-  border-top: 1px solid #eaebed;
-  background-color: #f8f8f8;
+    padding: 15px 0px;
+    border-top: 1px solid #e4e8eb;
+    background-color: #f8f8f8;
+    font-weight: 700;
 }
 .tabDataTxt{
     font-size: 12px;
@@ -849,24 +857,30 @@ header{
 }
 
 
-/*****************Create Event modal Start***************/
-.create-event-popup-modal .modal-title{
+/*****************Create Event and Bulletin Board Post Button modal Start***************/
+
+.create-event-popup-modal .modal-title,
+.BBPostBtnPopupModal .modal-title{
   color: #00539a;
   font-weight: 700;
 }
-.create-event-popup-modal .modal-body{
+.create-event-popup-modal .modal-body,
+.BBPostBtnPopupModal .modal-body{
   border: none;
   border-radius: 2px;
 }
-.create-event-popup-modal .modal-footer {
+.create-event-popup-modal .modal-footer,
+.BBPostBtnPopupModal .modal-footer {
   text-align: center;  
   border: none;
   padding: 0px;
 }
-.create-event-popup-modal .modal-footer button{
+.create-event-popup-modal .modal-footer button,
+.BBPostBtnPopupModal .modal-footer button{
   margin-bottom: 0px;
 }
-.create-event-popup-modal .modal-content{
+.create-event-popup-modal .modal-content,
+.BBPostBtnPopupModal .modal-content{
     border-bottom:4px solid #337ab7;
     border-radius: 0px;
     padding: 40px;
@@ -924,7 +938,7 @@ header{
   text-align: right;
   margin-top: 5px;
 }
-/*****************Create Event modal End***************/
+/*****************Create Event and Bulletin Board Post Button modal End***************/
 
 
 /*****************All Events in Month modal Start***************/
@@ -1007,44 +1021,102 @@ header{
 /*****************All Events in Month modal End***************/
 
 
-/*****************Food Delivery modal Start***************/
+/*****************Food Delivery and Music modal Start***************/
 @media screen and (min-width: 768px){
   .foodDeliPopupModal .modal-sm,
   .musicPopupModal .modal-sm,
   .suggestionPopupModal .modal-sm{
-      width: 400px;
+      width: 420px;
   }
 }
 
-.foodDeliPopupModal .modal-content{
-    border-bottom:4px solid #337ab7;
-    border-radius: 0px;
-    padding: 20px;
-    background-color: #f9f9f9;
-}
-
-/*****************Food Delivery modal End***************/
-
-
-/*****************Music modal Start***************/
+.foodDeliPopupModal .modal-content,
 .musicPopupModal .modal-content{
     border-bottom:4px solid #337ab7;
     border-radius: 0px;
-    padding: 20px;
+    padding: 10px;
     background-color: #f9f9f9;
+    font-weight: 700;
 }
+.foodDeliPopupModal .modal-body,
+.musicPopupModal .modal-body{
+  padding-bottom: 0px;
+}
+.foodEmail, .foodPass{
+  margin-bottom: 10px;
+}
+.foodEmail input,
+.foodPass input{
+  height: 50px;
+}
+.forgotPass{
+  font-size: 13px;
+}
+.forgotPass a{
+  text-decoration: none;
+  color: #f0b511;
+}
+.foodLoginBtn{
+  text-align: center;
+  padding: 20px 5px;
+}
+.foodLoginBtn button{
+  margin-bottom: 0px;
+}
+.foodDeliPopupWrap>p a,
+.musicPopupWrap>p a{
+  text-decoration: none;
+  color: #f0b511;
+}
+.loginWithFacebook button{
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+    background: #004a93;
+    border-radius: 25px;
+    border: none;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+/*****************Food Delivery and Music modal End***************/
 
-/*****************Music modal End***************/
 
 
 /*****************Suggestions modal Start***************/
 .suggestionPopupModal .modal-content{
     border-bottom:4px solid #337ab7;
     border-radius: 0px;
-    padding: 20px;
+    padding: 10px;
     background-color: #f9f9f9;
 }
-
+.suggestionPopupModal .modal-body{
+  padding-bottom: 0px;
+}
+.suggestionPopupWrap{
+  text-align: center;
+}
+.suggestionPopupWrap h3{
+  color: #004a93;
+  font-weight: 700;
+}
+.suggestionPopupWrap>p{
+  font-weight: 700;
+  text-align: left;
+}
+.checkAns{
+  text-align: left;
+  width: 200px;
+  margin: 0 auto;
+}
+.checkAns label{
+  font-weight: normal;
+  margin-left: 10px;
+}
+.checkAns .lgBtn{
+  width: 120px;
+  margin-top: 20px;
+}
 /*****************Suggestions modal End***************/
 
 
@@ -1106,6 +1178,169 @@ header{
 /*****************My Community End***************/
 
 
+/*****************Bulletin Board Start***************/
+.bulletinPost, .bulletinSrch{
+  margin-bottom: 35px;
+}
+.bulletinPost .PostBtn{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 12px;
+    background: #f0b511;
+    border-radius: 25px;
+    border: none;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.bulletinSrch input{
+    height: 45px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    position: relative;
+    padding: 2px 28px 2px 15px;
+    margin-bottom: 10px;
+}
+.bulletinSrch .fa-search {
+    position: absolute;
+    top: 13px;
+    right: 30px;
+    color: #ccc;
+    font-size: 18px;
+    font-weight: 700;
+}
+.bulletinBoardTabCont .FeaturesBox{
+  min-height: 175px;
+  padding: 25px 0px;
+}
+.bulletinBoardTabCont .FeaturesBox img {
+    margin: auto auto 15px;
+}
+.bulletinBoardTabCont .bbPostCover .bbPostWrap{
+  border-bottom: 1px solid #e4e8eb;
+  margin-bottom: 50px;
+}
+.bulletinBoardTabCont .bbPostCover .bbPostWrap:last-child{
+  border-bottom: 0px;
+  margin-bottom: 20px;
+}
+
+.bbPostWrap .bbPostImg{
+  height: 144px;
+  border: 1px solid #e4e8eb;
+  /* display: table-cell;
+  vertical-align: middle;*/
+}
+.bbPostWrap .bbPostImg img{
+  width: 90%;
+  height: 99%;
+  margin: auto;
+}
+.bbPostTxt{
+  font-size: 14px;
+}
+.bbPostTxt .titleTxt{
+  font-weight: 700;
+}
+.bbPostTxt .postedTxt{
+  font-size: 12px;
+}
+.bbPostTxt .postLink>a{
+  text-decoration: none;
+  color: #f0b511;
+  font-weight: 700;
+}
+.bbPostWrap .contPosterLink{
+  padding: 15px 10px;
+  text-align: right;
+}
+.contPosterLink>a{
+  text-decoration: none;
+  color: #f0b511;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/*****************Bulletin Board Pagination Start***************/
+.bbPostPagination .pagination,
+.bbPostPagination .pagination ul{
+  margin: 0px;
+  margin-right: 50px;
+  float: right;
+}
+.bbPostPagination .pagination>li>a, .bbPostPagination .pagination>li>span {
+    padding: 6px;
+    color: #f0b511;
+    background-color: #fff;
+    border: 0px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.bbPostPagination .pagination>li>a:focus, 
+.bbPostPagination .pagination>li>a:hover, 
+.bbPostPagination .pagination>li>span:focus, 
+.bbPostPagination .pagination>li>span:hover {
+    color: #5b9bff;
+    background-color: #fff;
+}
+.bbPostPagination .pagination>.active>a, 
+.bbPostPagination .pagination>.active>a:focus, 
+.bbPostPagination .pagination>.active>a:hover, 
+.bbPostPagination .pagination>.active>span, 
+.bbPostPagination .pagination>.active>span:focus, 
+.bbPostPagination .pagination>.active>span:hover {
+    color: #5b9bff;
+    cursor: default;
+    background-color: #fff;
+    border-color: #fff;
+}
+/*****************Bulletin Board Pagination End***************/
+
+
+/*****************Bulletin Board Contact Poster Popup Modal Start***************/
+.contactPosterPopupModal .modal-title{
+  color: #00539a;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.contactPosterPopupModal .modal-body{
+  border: none;
+  border-radius: 2px;
+  padding: 0px 40px;
+}
+.contactPosterPopupModal .modal-footer {
+  text-align: center;  
+  border: none;
+  padding: 0px;
+  margin-bottom: 20px;
+}
+.contactPosterPopupModal .modal-footer button{
+  margin-bottom: 0px;
+}
+.contactPosterPopupModal .modal-content{
+    max-width: 500px;
+    border-bottom:4px solid #337ab7;
+    border-radius: 0px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+.contactPosterForm .form-group{
+  margin-bottom: 40px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+.contactPosterForm textarea{
+  resize: none;
+  min-height: 120px;
+}
+
+/*****************Bulletin Board Contact Poster Popup Modal End***************/
+
+
+/*****************Bulletin Board End***************/
+
+
 
 /*****************My Building Start***************/
 .BuildingWrapper{
@@ -1129,8 +1364,11 @@ header{
   margin-top: 10px;
   margin-bottom: 30px;
 }
-
-
+@media screen and (max-width: 767px){
+  .BuildingWrapper{
+    margin-top: 95px;
+  }
+}
 /*****************My Building End***************/
 
 
@@ -1170,9 +1408,6 @@ header{
 .buildingTabWrap{
   margin-bottom: 40px;
   font-size: 16px;
-}
-.buildingTabWrap .pageTitle{
-  margin-bottom: 35px;
 }
 .buildingTabWrap .pageTitle h2{
     margin-top: 0px;

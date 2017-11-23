@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Business Marketplace Tab</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
+    
+    <link href="css/lightslider.css" rel="stylesheet">
+    <link href='css/fullcalendar.min.css' rel='stylesheet'>
+    <link href="css/eServus-front.css" rel="stylesheet">
+
+</head>
+<body>
+	<header>
+		<div class="eServusHeader">
+			<div class="headerWrap">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-4 col-sm-2">
+							<div class="header-logo">
+								<a href="#"><img src="images/Menkes_logo.png" class="img-responsive"></a>	
+							</div>
+						</div>
+						<div class="col-xs-8 col-sm-10">
+							<div class="searchBoxWrap pull-left">
+								<form action="#" method="get">
+									<div class="headSearch">
+										<input type="text" class="form-control" name="search" id="search" placeholder="Search our offers" required="">
+										 <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+									</div>
+								</form>
+							</div>
+
+							<div class="cart-area pull-right">
+							  	<div class="notification-block">
+							    	<a href="#"><i class="fa fa-bell"></i>
+									<div class="notification">Notification<span class="note">05</span></div></a>
+								</div>
+								 
+								<div class="custom-block">
+							    	<a href="#"><i class="fa fa-user-circle-o"></i>
+									<div class="notification">Welcome<span class="downArrow"><i class="fa fa-chevron-down"></i></span></div></a>
+								</div>
+								 
+								 									  
+								<div class="cart-dropdown">
+									<a href="#" class="cart-dropdown-icon">
+									  <i class="fa fa-shopping-cart"></i>
+										<div class="cart">Cart<span class="cart">05</span></div></a>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="navWrapper">
+				<nav>
+				  <a href="#" class="menu-trigger"><i class="fa fa-bars"></i></a>
+				  <ul>
+				    <li><a href="#">MY STORE</a></li>
+				    <li><a href="#">MY COMMUNITY</a></li>
+				    <li><a href="#" class="navActive">MY BUILDING</a></li>
+				    <div class="clearfix"></div>
+				  </ul>
+
+				</nav>
+			</div>
+		</div>
+	</header>
+
+	<div class="BuildingWrapper">
+		<div class="homepageBar">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="streetCount">
+					 		<h3>4711 Yonge Street</h3>
+						</div>
+					</div>
+					
+					<div class="col-sm-4">
+					 	<!-- <div class="pageTitle"><h2>Events</h2>
+							<div class="titleBorder"></div>
+					 	</div> -->
+					</div>
+						
+					<div class="col-sm-4">
+						<div class="weatherInfo">	
+					 		<img src="images/weather.jpg" width="231" height="69" alt="Weather">
+						</div>
+					</div>
+
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="breadcrumbWrap">
+			<div class="container">
+				<div class="breadcrumbCover">
+					<ul class="breadcrumb">
+					  <li><a href="#">My Community</a></li>
+					  <li><a href="#" class="activeBread">Busines Marketplace</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div class="buildingTabWrap">
+			<div class="container">
+				<div class="pageTitle"><h2>Busines Marketplace</h2>
+					<div class="titleBorder"></div>
+			 	</div>
+			 	<div class="businessMrktPlaceTabCont">
+			 		<div class="row">
+			 			<div class="col-xs-12">
+			 				<div class="BMLogoWrap">
+			 					<div class="BMLogoCont">
+			 						<img src="images/BMarketLogo01.png">
+			 					</div>
+			 					<div class="BMLogoCont">
+			 						<img src="images/BMarketLogo02.png">
+			 					</div>
+			 					<div class="BMLogoCont">
+			 						<img src="images/BMarketLogo03.png">
+			 					</div>
+			 					<div class="BMLogoCont">
+			 						<img src="images/BMarketLogo04.png">
+			 					</div>
+			 					<div class="BMLogoCont">
+			 						<img src="images/BMarketLogo05.png">
+			 					</div>
+			 				</div>
+			 			</div>
+			 			<div class="clearfix"></div>
+			 		</div>
+
+			 		<div class="BMPlacePostsWrap">
+			 			<div class="row">
+				 			<div class="col-xs-12">
+				 				<p class="BMPostTitle">BUSINESS POSTS</p>
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="BMPostaWrap">
+											<div class="bbPostTxt clearfix">
+												<p class="titleTxt">Regus is looking for an UX/UI Designer</p>
+												<p class="postedTxt">Posted on 3/05/2018</p>
+												<p class="postDisc">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolors et quas molestias excepturi sint occaecati cupiditate non proident, similique sunt in culpa</p>
+											</div>
+											<div class="contPosterLink">
+												<a href="#" data-toggle="modal" data-target="#contactPosterPopup">Contact Poster ></a>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="BMPostaWrap">
+											<div class="bbPostTxt clearfix">
+												<p class="titleTxt">Coast to Coast's is looking for a developer</p>
+												<p class="postedTxt">Posted on 3/05/2018</p>
+												<p class="postDisc">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolors et quas molestias excepturi sint occaecati cupiditate non proident, similique sunt in culpa</p>
+											</div>
+											<div class="contPosterLink">
+												<a href="#" data-toggle="modal" data-target="#contactPosterPopup">Contact Poster ></a>
+											</div>
+
+											<div class="morePosts">
+												<a href="#">More Posts ></a>
+											</div>
+										</div>
+									</div>
+								</div>
+				 			</div>
+				 		</div>
+			 		</div>
+
+			 		<div class="BMCompanyDirectory">
+			 			<p class="BMPostTitle">Company Directory</p>
+			 			<div class="row">
+				 			<div class="col-sm-8">
+				 				<div class="catSearchWrap clearfix">
+						 			<div class="tenantCat">
+						 				<label>Category</label>
+						 				<select>
+											<option value="0">Show All</option>
+											<option value="1">Option 1</option>
+											<option value="1">Option 2</option>
+										</select>
+						 			</div>
+						 			<div class="tenantSrch">
+						 				<input type="text" name="search">
+						 				<i class="fa fa-search" aria-hidden="true"></i>
+						 			</div>
+						 		</div>
+
+				 				<div class="companyDirTblWrap">
+				 					<div class="table-responsive">
+						              	<table class="table companyDirTbl" id="companyDirTbl">
+						                  	
+						                  	<tbody>
+						                      	<tr>
+						                          	<td>
+						                          		<div class="companyDirImg">
+						                          			<img src="images/BMarketLogo01.png">
+						                          		</div>
+						                          	</td>
+						                          	<td>
+														<div class="companyDirInfo">
+															<p class="companyName">Big Brothers Big Sisters </p>
+															<p class="companyType">Charity</p>
+															<p class="companyTxt">Suite 1506</p>
+															<p class="companyPhone">506 571 0000</p>
+														</div>
+						                          	</td>
+						                      	</tr>
+						                      	<tr>
+						                          	<td>
+						                          		<div class="companyDirImg">
+						                          			<img src="images/BMarketLogo02.png">
+						                          		</div>
+						                          	</td>
+						                          	<td>
+														<div class="companyDirInfo">
+															<p class="companyName">Elements</p>
+															<p class="companyType">Accounting</p>
+															<p class="companyTxt">Suite 1506</p>
+															<p class="companyPhone">506 571 0000</p>
+														</div>
+						                          	</td>
+						                      	</tr>
+						                      	<tr>
+						                          	<td>
+						                          		<div class="companyDirImg">
+						                          			<img src="images/BMarketLogo03.png">
+						                          		</div>
+						                          	</td>
+						                          	<td>
+														<div class="companyDirInfo">
+															<p class="companyName">National Bank</p>
+															<p class="companyType">Bank</p>
+															<p class="companyTxt">Suite 1506</p>
+															<p class="companyPhone">506 571 0000</p>
+														</div>
+						                          	</td>
+						                      	</tr>
+						                      	<tr>
+						                          	<td>
+						                          		<div class="companyDirImg">
+						                          			<img src="images/BMarketLogo04.png">
+						                          		</div>
+						                          	</td>
+						                          	<td>
+														<div class="companyDirInfo">
+															<p class="companyName">Regus</p>
+															<p class="companyType">Business Center</p>
+															<p class="companyTxt">Suite 1506</p>
+															<p class="companyPhone">506 571 0000</p>
+														</div>
+						                          	</td>
+						                      	</tr>
+						                      	<tr>
+						                          	<td>
+						                          		<div class="companyDirImg">
+						                          			<img src="images/BMarketLogo05.png">
+						                          		</div>
+						                          	</td>
+						                          	<td>
+														<div class="companyDirInfo">
+															<p class="companyName">Coast to Coast</p>
+															<p class="companyType">Charity</p>
+															<p class="companyTxt">Suite 1506</p>
+															<p class="companyPhone">506 571 0000</p>
+														</div>
+						                          	</td>
+						                      	</tr>
+
+						                  	</tbody>
+						              	</table>
+						            </div>
+				 				</div>
+
+							</div>
+							<div class="col-sm-4">
+								
+								<div class="advertiseWrap">
+									<p class="addTxt">Advertise Here</p>
+								</div>
+								<div class="advertiseWrap Mrgn0">
+									<p class="addTxt">Advertise Here</p>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+				 		</div>
+			 		</div>
+			 	</div>
+			</div>
+		</div>
+
+		<div class="advertiseBottom clearfix">
+			<div class="container">
+				<div class="addContent">
+					<p class="addHere">Advertise Here</p>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+<!-- Bulletin Board Post Button Popup Modal Start -->	
+
+	<div class="BBPostBtnPopupModal">
+	  <div class="modal fade" id="BBPostBtnPopup" role="dialog">
+	    <div class="modal-dialog modal-md">
+	    
+	    <!--   Modal content -->
+	      	<div class="modal-content">
+	      
+	          	<div class="clearfix">
+	          		<button type="button" class="close" data-dismiss="modal"><strong>&times;</strong></button>
+	          	</div>
+	          	<h4 class="modal-title text-center"><strong>Post Details</strong></h4>
+	         
+	     
+		        <div class="modal-body clearfix">
+		          	<form class="form-horizontal createEventForm" role="form">
+		          		<div class="row">
+			          		<div class="form-group">
+					            <label class="col-sm-3 control-label" for="evevntPhoto">Photo (optional)</label>
+					            <div class="col-sm-9">
+					              <div class="uploadPhoto">
+					              	<input type="text" placeholder="Upload photo or video" class="form-control">
+					              	<span class="uploadIcon"><i class="fa fa-camera" aria-hidden="true"></i></span>
+					              </div>
+					              
+					            </div>
+					        </div>
+					        <div class="form-group">
+					            <label class="col-sm-3 control-label" for="evevntName">Title</label>
+					            <div class="col-sm-9">
+					              <input type="text" placeholder="Add a short, clear name" class="form-control">
+					            </div>
+					        </div>
+					        
+					        <div class="form-group">
+					            <label class="col-sm-3 control-label" for="description">Description</label>
+					            <div class="col-sm-9">
+					              <textarea placeholder="Tell people more about the evevnt" class="form-control"></textarea>
+					            </div>
+					        </div>
+				          	<div class="form-group">
+					            <label class="col-sm-3 control-label" for="repeat">Email</label>
+					            <div class="col-sm-9">
+					              <input type="text" placeholder="Enter email addresses" class="form-control">
+					            </div>
+					        </div>
+					        <div class="form-group">
+					            <label class="col-sm-3 control-label" for="repeat">Phone Number (optional)</label>
+					            <div class="col-sm-9">
+					              <input type="text" placeholder="Enter phone number" class="form-control">
+					            </div>
+					        </div>
+				          
+				            <div class="clearfix"></div>
+				          
+			        	</div>
+		          	</form>
+		          
+		        </div>
+		        <div class="modal-footer">
+		             <button id="" type="button" class="lgBtn">Post</button>
+		        </div>
+	      	</div>
+	      
+	    </div>
+	  </div>
+	</div>
+
+<!-- Bulletin Board Post Button Popup Modal End -->
+
+
+<!-- Bulletin Board Contact Poster Link Popup Modal Start -->	
+
+	<div class="contactPosterPopupModal">
+	  <div class="modal fade" id="contactPosterPopup" role="dialog">
+	    <div class="modal-dialog modal-md">
+	    
+	    <!--   Modal content -->
+	      	<div class="modal-content">
+	      
+	          	<div class="clearfix">
+	          		<!-- <button type="button" class="close" data-dismiss="modal">
+	          			<i class="fa fa-times" aria-hidden="true"></i>
+	          		</button> -->
+	          		<button type="button" class="close" data-dismiss="modal"><strong>&times;</strong></button>
+	          	</div>
+	          	<h4 class="modal-title text-center"><strong>Contact Poster</strong></h4>
+	         
+	     
+		        <div class="modal-body clearfix">
+		          	<form class="form-horizontal contactPosterForm" role="form">
+					        <div class="form-group">
+					            <input type="text" placeholder="Your name" class="form-control">
+					        </div>
+					        
+					        <div class="form-group">
+					            <textarea placeholder="Hi, I'm interested!" class="form-control"></textarea>
+					        </div>
+				          
+			        	 <div class="clearfix"></div>
+		          	</form>
+		          
+		        </div>
+		        <div class="modal-footer">
+		             <button id="" type="button" class="lgBtn">Post</button>
+		        </div>
+	      	</div>
+	      
+	    </div>
+	  </div>
+	</div>
+
+<!-- Bulletin Board Contact Poster Link Popup Modal End -->
+
+
+	<footer id="footer" class="footer">
+		<div class="container">
+			<div class="footLogo"><img src="images/Menkes_logo.png" class="img-responsive"></div>
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="footerLinks">
+						<ul>
+						    <li><a href="#">Why eServus?</a></li>
+						    <li><a href="#">Suppliers</a></li>
+						    <li><a href="#">Property Managers</a></li>
+						    <li><a href="#">FAQ</a></li>
+						    <li><a href="#">Contact</a></li>
+							<li><a href="#">Terms &amp; Condition</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="footerSocial">
+						<p>Stay Connected</p>
+						<i class="fa fa-tumblr-square"></i>
+						<i class="fa  fa-twitter-square"></i>
+						<i class="fa  fa-instagram"></i>
+						
+						<div class="clearfix"></div>
+						<div class="contact-details">
+							eServus Toronto <strong>(not your city?)</strong><br>
+							Monday to Friday:9:00AM - 5:00PM
+						</div>
+						<div class="contact-details">
+							<a href="mailto:request@eServus.com">request@eServus.com</a><br>416 598 8888
+						
+					    </div>
+					</div>
+				</div>
+				
+				<div class="col-sm-5">
+					<div class="newsletter">
+						
+						<p class="newsletterInfo"><b>Sign up to receive emails from eServus to find out about the latest shows and events, contestes, opportunities and exclusiveoffers.</b></p>
+
+						<div class="alert alert-success hidden" id="newsletterSuccess">
+							<strong>Success!</strong> You've been added to our email list.
+						</div>
+
+						<div class="alert alert-danger hidden" id="newsletterError"></div>
+
+						<form id="newsletterForm" action="" method="POST">
+							<div class="input-group">
+								<input class="form-control" placeholder="Email Address" name="newsletterEmail" id="newsletterEmail" type="text">
+								<span class="SignUpBtn">
+									<button class="" type="submit">Sign Up</button>
+								</span>
+							</div>
+						</form>
+						
+						<div class="pricavy-details">
+							You can unsubscribe at any time. For additional information on eServus privacy commitment to you, please view our Privacy Policy.
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+				<p class="copyright-text">Copyright © eServus Inc. All Rights Reserved.</p>
+			</div>
+		</div>
+	</footer>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  	<script src="js/bootstrap.min.js"></script>
+  	<script src="js/lightslider.js"></script>
+  	<script src='js/moment.min.js'></script>
+	<script src='js/fullcalendar.min.js'></script>
+	<script src="js/scrollbot.min.js"></script>
+	<script src="js/aui-min.js"></script>
+	<script src='js/eServusFront.js'></script>
+  
+</body>
+</html>

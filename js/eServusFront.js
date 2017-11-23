@@ -150,11 +150,21 @@
 		});
 
 
-	//for Scroll effect JS on Tenant Directory Tab
+	//for Scroll effect JS 
 		$(document).ready(function() {
-
+			// for Scroll effect JS on Tenant Directory Tab
 			if($("body").find(".tanantDirTblWrap").length > 0){
 				var tanantDirTblScroll = new scrollbot(".tanantDirTblWrap");
+			}
+
+			// for Scroll effect JS to Company Directory on Business Marketplace
+			if($("body").find(".companyDirTblWrap").length > 0){
+				var companyDirTblWrap = new scrollbot(".companyDirTblWrap");	
+			}
+
+			// for Scroll effect JS to Business Posts
+			if($("body").find(".businessPostsWrap").length > 0){
+				var businessPostsWrap = new scrollbot(".businessPostsWrap");
 			}
 		});
 

@@ -21,11 +21,14 @@ body {
 }
 
 /*****************eServus Header Start***************/
-.padL{
-    padding-left: 0px;
+.padL0{
+    padding-left: 0px!important;
 }
-.padR{
-    padding-left: 0px;
+.padR0{
+    padding-left: 0px!important;
+}
+.Mrgn0{
+  margin: 0px!important;
 }
 header{
   position: fixed;
@@ -1251,8 +1254,6 @@ header{
 .bbPostWrap .bbPostImg{
   height: 144px;
   border: 1px solid #e4e8eb;
-  /* display: table-cell;
-  vertical-align: middle;*/
 }
 .bbPostWrap .bbPostImg img{
   width: 90%;
@@ -1264,9 +1265,13 @@ header{
 }
 .bbPostTxt .titleTxt{
   font-weight: 700;
+  font-family: 'MontserratBold';
 }
 .bbPostTxt .postedTxt{
   font-size: 12px;
+}
+.bbPostTxt .postDisc{
+ 
 }
 .bbPostTxt .postLink>a{
   text-decoration: none;
@@ -1362,6 +1367,151 @@ header{
 
 
 /*****************Bulletin Board End***************/
+
+
+
+/*****************Business Marketplace Start***************/
+.BMPlacePostsWrap{
+  border-bottom: 1px solid #e4e8eb;
+  margin-bottom: 45px;
+}
+
+.BMLogoWrap .BMLogoCont{
+  width: 19%;
+  display: inline-block;
+  margin-bottom: 45px;
+}
+.BMLogoWrap .BMLogoCont>img{
+  display: block;
+  max-width: 70%;
+  height: auto;
+}
+.BMPostTitle{
+  color: #5b9bff;
+  font-weight: 700;
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 45px;
+  text-transform: uppercase;
+}
+.BMPostaWrap{
+  width: 85%;
+  margin: 0 auto;
+}
+.BMPostaWrap .postDisc{
+  margin: 20px 0px;
+}
+.BMPostaWrap .contPosterLink{
+  margin-bottom: 45px;
+}
+.BMPostaWrap .morePosts{
+  margin-bottom: 20px;
+}
+.BMPostaWrap .morePosts a{
+  text-decoration: none;
+  color: #f0b511;
+  font-weight: 700;
+  font-size: 14px;
+}
+@media only screen  and (max-width: 767px){
+  .BMLogoWrap .BMLogoCont{
+    width: 49%;
+  }
+}
+
+.companyDirTblWrap{
+    /*max-height:500px;*/
+    height: 500px;
+    overflow-y:auto;
+    font-size: 14px;
+  }
+.companyDirTblWrap .scrollbot-outer-parent{
+    z-index: 2!important;
+  }
+.companyDirTblWrap .scrollbot-scrollbar{
+    background-color: #f0b511!important;
+    border-radius: 5px;
+  }
+.companyDirTbl>tbody>tr:first-child>td{
+ border-top: 0px;
+}
+.companyDirTbl>thead>tr>th{
+  border-bottom: 0px;
+  vertical-align: top;
+  color: #599bfc;
+}
+.companyDirTbl>tbody>tr>td{
+  vertical-align: middle;
+  padding: 15px 5px;
+}
+.companyDirImg{
+  text-align: center;
+}
+.companyDirImg>img{
+  max-width: 120px;
+  height: auto;
+}
+.companyDirInfo>p{
+  margin-bottom: 0px;
+}
+.companyDirInfo .companyName{
+  font-weight: 700;
+  color: #004a93;
+}
+.companyDirInfo .companyType{
+  font-weight: 700;
+}
+.BMCompanyDirectory .advertiseWrap{
+  margin-bottom: 40px;
+  margin-top: 0px;
+}
+@media only screen and (max-width: 767px){
+  .BMCompanyDirectory .advertiseWrap{
+    display: none;
+  }
+}
+/*****************Business Marketplace End***************/
+
+
+/*****************Business Posts Start***************/
+
+.businessPostsWrap{
+    /*max-height:500px;*/
+    height: 500px;
+    overflow-y:auto;
+    font-size: 14px;
+  }
+.businessPostsWrap .scrollbot-outer-parent{
+    z-index: 2!important;
+  }
+.businessPostsWrap .scrollbot-scrollbar{
+    background-color: #f0b511!important;
+    border-radius: 5px;
+  }
+.businessPostsWrap .BMPostaWrap{
+  border-bottom: 1px solid #e4e8eb;
+  margin-bottom: 45px;
+}
+.businessPostsWrap .BMPostaWrap .contPosterLink{
+  margin-bottom: 20px;
+}
+.businessPostTabCont .advertiseWrap{
+  margin-bottom: 40px;
+  margin-top: 0px;
+}
+.businessPostTabCont .bulletinPost{
+  text-align: center;
+}
+.businessPostTabCont .bulletinPost .PostBtn {
+    width: 220px;
+    padding: 8px;
+}
+@media only screen and (max-width: 767px){
+  .businessPostTabCont .advertiseWrap{
+    display: none;
+  }
+}
+/*****************Business Posts End***************/
 
 
 
@@ -1541,7 +1691,14 @@ header{
   }
   .catSearchWrap .tenantCat{
     text-align: left;
-    margin-left: 25px;
+   
+  }
+  .catSearchWrap .tenantSrch{
+   padding-left: 80px;
+   margin-left: 0px;
+  }
+  .tenantSrch .fa-search{
+      left: 270px; 
   }
 }
 /*****************Tenant Directory Tab Start***************/

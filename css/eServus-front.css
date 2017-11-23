@@ -83,6 +83,7 @@ header{
 .cart-area .notification-block,
 .cart-area .custom-block,
 .cart-area .cart-dropdown {
+    position: relative;
     display: inline-block;
     text-align: center;
     font-size: 14px;
@@ -148,10 +149,31 @@ header{
     padding: 5px;
     margin-left: 3px;
 }
-.cartDropDownMenu{
-  display: none;
-}
 
+.signOutPopup{
+    display:none;
+    width: 130px;
+    background-color: #fff;
+    position: absolute;
+    top: 45px;
+    text-transform: none;
+    min-width: 130px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+    padding: 10px;
+}
+.signOutPopup a{
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  display: block;
+  width: 100%;
+  padding: 6px;
+  background: #f0b511;
+  border-radius: 25px;
+  border: none;
+  margin-bottom: 10px;
+}
 @media screen and (max-width: 767px) {
 	.searchBoxWrap,
 	.cart-area .custom-block{

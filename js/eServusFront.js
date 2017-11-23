@@ -6,6 +6,11 @@
 		    $('nav ul').slideToggle(50);
 		  });//end slide toggle
 
+		//Welcome Popup JS
+		  $('#signOut').click(function() {
+		    $('.signOutPopup').slideToggle(50);
+		  });//end slide toggle
+
 
 		//for Active Navigation Tab
 	        $('.navWrapper nav li>a').click(function(){

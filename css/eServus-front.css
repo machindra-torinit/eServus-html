@@ -1,8 +1,28 @@
 
+
+@charset "utf-8";
+* {
+  margin:0px;
+  padding:0px;
+}
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('../fonts/Montserrat-Regular.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url('../fonts/Montserrat-Bold.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   	font-size: 14px;
     color:#474646;
-  	font-family: 'Montserrat';
+  	font-family: 'Montserrat-Regular';
 }
 .row [class*="col-"]{
     padding-right: 10px;
@@ -11,7 +31,7 @@ body {
 .lgBtn {
     width: 200px;
     font-size: 16px;
-    font-weight: 700;
+    font-family: 'Montserrat-Bold';
     padding: 12px;
     background: #f0b511;
     border-radius: 25px;
@@ -38,13 +58,13 @@ header{
 }
 .eServusHeader{
 	position: relative;
-	padding-bottom: 10px;
+	padding-bottom: 14px;
   background-color: #fff;
 }
 .headerWrap{
-	padding-top: 28px;
-    padding-bottom: 28px;
-    border-bottom: 1px #e0e1e4 solid;
+	padding-top: 27px;
+  padding-bottom: 18px;
+  border-bottom: 1px #e4e8eb solid;
 }
 .searchBoxWrap{
 	position: relative;
@@ -53,13 +73,14 @@ header{
     min-width: 100px;  
 }
 .headSearch .form-control{
+  font-family: 'Montserrat-Regular';
 	 padding: 9px 30px 9px 15px;
     color: #999;
     width: 100%;
     height: 38px;
     margin: 0;
     line-height: 20px;
-    border: 1px solid #e8ecee;
+    border: 1px solid #e4e8eb;
     border-radius: 19.98px;
     box-shadow: none;
 }
@@ -106,8 +127,8 @@ header{
 }
 .cart-area .notification {
     color: #004a93 !important;
-    font-size: 11px;
-    font-weight: 700;
+    font-size: 10px;
+    font-family: 'Montserrat-Bold';
     text-transform: uppercase;
 }
 .cart-area .notification span.downArrow i {
@@ -136,8 +157,8 @@ header{
 }
 .cart-dropdown a .cart {
     color: #004a93;
-    font-size: 11px;
-    font-weight: 700;
+    font-size: 10px;
+    font-family: 'Montserrat-Bold';
     text-transform: uppercase;
 }
 .cart-dropdown span.cart,
@@ -186,9 +207,14 @@ header{
 		float: right;
 	}
   .headerWrap{
-      padding-top: 28px;
-      padding-bottom: 28px;
-      border-bottom: 0px #e0e1e4 solid;
+    padding-top: 40px;
+    padding-bottom: 0px;
+    border-bottom: 0px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .headerWrap .header-logo{
+    padding-left: 32px;
   }
 }
 @media screen and (max-width: 350px) {
@@ -202,12 +228,11 @@ header{
 .eServusHeader .navWrapper {
     padding: 0;
     background-color: #004a93;
-    min-height: 53px;
 }
 .navWrapper nav {
- 	  width: 410px;
+ 	  width: 420px;
     margin: 0 auto;
-    min-height: 45px;
+    min-height: 40px;
 }
 .navWrapper nav ul{
 	list-style-type: none;
@@ -223,16 +248,14 @@ header{
     display:none;
   }
 .navWrapper nav li> a {
+    font-family: 'Montserrat-Bold';
   	color: #fff;
-	  display: block;
-	  text-align: center;
-	  text-decoration: none;
-	  text-transform: uppercase;
-	  font-size: 12px;
-	  font-style: normal;
-	 font-weight: 700;
-	line-height: 20px;
-	padding: 15px 20px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 12px 20px;
  }
 
 .navWrapper nav li> a:hover {
@@ -261,7 +284,7 @@ header{
 	    padding: 0;
 	    background-color: transparent;
 	    position: absolute;
-	    top: 20px;
+	    top: 40px;
 	    left: 20px;
 	    width: 150px;
 	}
@@ -320,7 +343,10 @@ header{
     clear: both;
 }
 .footer .footLogo{
-	margin-bottom: 30px;
+  margin-bottom: 30px;
+}
+.footer .footLogo img{
+	max-width: 150px;
 }
 .footerLinks ul{
 	list-style-type: none;
@@ -336,12 +362,10 @@ header{
 .footerLinks li>a{
 	color: #474646;
     font-size: 14px;
-    font-weight: 700;
+    font-family: 'Montserrat-Bold';
     text-decoration: none;
 }
 .footerSocial>p{
-	font-size: 16px;
-    font-weight: 400;
     float: left;
     width: 150px;
 }
@@ -355,12 +379,16 @@ header{
     line-height: 24px;
     font-weight: normal;
 }
+.footerSocial .contact-details strong{
+  font-family: 'Montserrat-Bold';
+}
 .footerSocial .contact-details>a {
 	text-decoration: none;
 	color: #474646;
 }
 .newsletter .newsletterInfo {
     margin-bottom: 20px;
+    font-family: 'Montserrat-Bold';
 }
 .newsletter input.form-control {
     height: 50px;
@@ -380,14 +408,13 @@ header{
 .newsletter .input-group .SignUpBtn button{
 	background-color: #fff;
    color: #004a93;
-   font-weight: 700;
+   font-family: 'Montserrat-Bold';
    border: 0;
 }
 .newsletter .pricavy-details {
-    color: #91959d;
-    font-size: 11px;
+    color: #90949c;
+    font-size: 12px;
     margin-top: 20px;
-    line-height: 24px;
 }
 .footerLinks, .footerSocial, .newsletter{
 	margin-bottom: 30px;
@@ -408,7 +435,7 @@ header{
 
 /*****************My Community Start***************/
 .landingWrapper{
-  margin-top: 158px;
+  margin-top: 142px;
 }
 @media screen and (max-width: 767px){
   .landingWrapper{
@@ -425,27 +452,41 @@ header{
 .socialFeedWrap .container{
     max-width: 620px;
 }
+.homepageBar .streetCount{
+  margin-bottom: 45px;
+}
 .homepageBar .streetCount h3 {
     color: #90949c;
     font-size: 24px;
-    font-weight: 700;
     margin: 0;
-    line-height: 66px;
+    padding: 20px 0px;
 }
 .pageTitle{
-    font-size: 24px;
-    margin-bottom: 45px;
-    
+    margin-bottom: 45px;  
 }
 .pageTitle h2{
+    font-family: 'Montserrat-Regular';
+    font-size: 24px;
+    margin-top: 21px;
     margin-bottom: 20px;
     text-align: center;
-    font-weight: 700;
 }
 .titleBorder{
 	width: 60px;
 	margin: 0 auto;
 	border-bottom: 3px #f0b511 solid;
+}
+@media screen and (max-width: 767px){
+  .homepageBar .streetCount{
+    margin-bottom: 10px;
+  }
+  .pageTitle h2{
+    font-size: 20px;
+  }
+  .homepageBar .streetCount h3{
+    font-size: 16px;
+    padding: 0px;
+  }
 }
 /*****for homepageBar section End******/
 
@@ -481,7 +522,15 @@ header{
 .communitySlider{
    margin-bottom: 85px;
 }
+.sliderWrap .lSSlideOuter .lSPager.lSGallery li.active{
+    border-radius: 0px;
+    border-bottom: 3px solid #5b9bff;
+    
+  }
 @media screen and (max-width: 767px){
+  .communitySlider {
+      margin-bottom: 66px;
+  }
   .communitySlider .container .col-md-8{
      padding-left: 0px;
      padding-right: 0px;
@@ -491,6 +540,7 @@ header{
     overflow: visible;
   }
   .sliderWrap ul>li .imgTxtWrap{
+    font-size: 12px;
     width: 80%;
     margin: 0 auto;
     padding: 10px;
@@ -514,12 +564,8 @@ header{
     height: 70px!important;
     padding: 7px;
   }
-  .sliderWrap .lSSlideOuter .lSPager.lSGallery li.active{
-    border-radius: 0px;
-    border-bottom: 3px solid #00539a;
-    
-  }
-  .homepageBar .pageTitle{
+  
+  .pageTitle{
     margin-bottom: 20px;
   }
 }
@@ -531,11 +577,11 @@ header{
 .calenderWrap .fc-toolbar.fc-header-toolbar {
     margin-bottom: 10px; 
     padding: 5px 0px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #e4e8eb;
 }
 .calenderWrap .fc-toolbar h2 {
     font-size: 14px;
-    font-weight: 700;
+    font-family: 'Montserrat-Bold';
     color: #f0b511;
 
 }
@@ -557,10 +603,13 @@ header{
     text-align: center;
     vertical-align: middle;
     font-size: 12px;
-    font-weight: 700;
+    color: #474646;
+}
+.calenderWrap .fc td{
+  font-family: 'Montserrat-Regular';
 }
 .calenderWrap .fc th { 
- 
+  font-family: 'Montserrat-Bold';
   text-transform: uppercase;
 }
 .calenderWrap .fc-head-container{
@@ -586,7 +635,6 @@ header{
 /***for Calender End*/
 .createEventWrap .lgBtn{
     width: 100%;
-    font-weight: 700;
     margin-top: 5px;
 }
 .createEventWrap{
@@ -596,13 +644,12 @@ header{
   text-decoration: none;
   color: #f0b511;
   font-size: 16px;
-  font-weight: 700;
+  font-family: 'Montserrat-Bold';
 }
 @media screen and (max-width: 991px){
   .createEventWrap .lgBtn{
       width: 300px;
-      font-weight: 700;
-      margin: 25px auto 0px;
+      margin: 25px auto;
   }
 }
 .commFeatures{
@@ -616,7 +663,7 @@ header{
   text-decoration: none;
   font-size: 14px;
   color:#474646;
-  font-weight: 700;
+  font-family: 'Montserrat-Regular';
 }
 .FeaturesBox:hover{
   background-color: #e4e8eb;
@@ -640,6 +687,7 @@ header{
 .sociFeedPost input.form-control {
     height: 56px;
     padding: 6px 25px;
+    font-family: 'Montserrat-Regular';
 }
 .sociFeedPost .input-group{
 	position: relative;
@@ -656,8 +704,8 @@ header{
 	background-color: #fff;
    color: #004a93;
    border: 0;
-   font-size: 18px;
-   font-weight: 700;
+   font-size: 16px;
+   font-family: 'Montserrat-Bold';
 }
 .sociFeedPost .input-group .SignUpBtn button i{
 	padding-right: 10px;
@@ -667,7 +715,7 @@ header{
 }
 .sociFeedContent{
 	margin-bottom: 40px;
-	 border-bottom: 1px solid #eaebed;
+	 border-bottom: 1px solid #e4e8eb;
 }
 .sociFeedContImg{
   max-width: 85px;
@@ -682,9 +730,7 @@ header{
     margin-bottom: 0px;
     border-bottom: 0px;
 }
-.sociFeedContTxt{
-  font-weight: 700;
-}
+
 .sociFeedContTxt .sociTxt{
     margin-top: 10px;
     margin-bottom: 30px;
@@ -725,11 +771,18 @@ header{
     padding-top: 30px;
 }
 .addContent .addHere{
-    font-size: 30px;
+    font-size: 28px;
     text-align: center;
     margin-bottom: 5px;
 }
 @media screen and (max-width: 767px) {
+  .commFeatures .row [class*="col-"] {
+    padding-right: 7px;
+    padding-left: 7px;
+  }
+  .FeaturesBox{
+    margin-bottom: 14px;
+  }
 .sociFeedContImg, .sociFeedContTxt{
     text-align: center;
     margin-bottom: 15px
@@ -739,10 +792,15 @@ header{
 .sociFeedContTxt .moreAnnLink{
     text-align: left;
 }
-
+  .annoNewsWrap, .socialFeedWrap{
+    margin-top: 26px;
+  }
 }
 
 /*********Community Tabs Start*********/
+.annoNewsWrap{
+    margin-bottom: 15px;
+}
 
 @media screen and (max-width: 479px) {
   .nav-tabs-responsive > li {
@@ -834,17 +892,16 @@ header{
 }
 .Announcements-tabs .nav-tabs>li.active>a, .Announcements-tabs .nav-tabs>li.active>a:focus, 
 .Announcements-tabs .nav-tabs>li.active>a:hover {
-    color: #00539a;
-    font-weight: 700;
+    color: #5b9bff;
+    font-family: 'Montserrat-Bold';
     font-size: 12px;
     border: none;
-    border-bottom: 3px solid #00539a;
+    border-bottom: 3px solid #5b9bff;
 }
 
 .Announcements-tabs .nav-tabs>li>a {
     color: #90949c;
     font-size: 12px;
-    font-weight: 700;
 }
 .Announcements-tabs .nav>li>a:focus, .Announcements-tabs .nav>li>a:hover {
      background-color: transparent; 
@@ -856,7 +913,6 @@ header{
     padding: 15px 0px;
     border-top: 1px solid #e4e8eb;
     background-color: #f8f8f8;
-    font-weight: 700;
 }
 .tabDataTxt{
     font-size: 12px;
@@ -866,9 +922,6 @@ header{
     color: #f0b511;
 }
 /*********Community Tabs End*********/
-.annoNewsWrap{
-    margin-bottom: 15px;
-}
 .advertiseWrap{
     min-height: 315px;
     background-color: #f8f8f8;
@@ -876,8 +929,8 @@ header{
 
 }
 .advertiseWrap .addTxt{
+    font-size: 28px;
     text-align: center;
-    font-size: 30px;
     padding-top: 120px;
 }
 
@@ -887,7 +940,7 @@ header{
 .create-event-popup-modal .modal-title,
 .BBPostBtnPopupModal .modal-title{
   color: #00539a;
-  font-weight: 700;
+  font-family: 'Montserrat-Bold';
 }
 .create-event-popup-modal .modal-body,
 .BBPostBtnPopupModal .modal-body{
@@ -906,7 +959,7 @@ header{
 }
 .create-event-popup-modal .modal-content,
 .BBPostBtnPopupModal .modal-content{
-    border-bottom:4px solid #337ab7;
+    border-bottom:4px solid #5b9bff;
     border-radius: 0px;
     padding: 40px;
     background-color: #f9f9f9;
@@ -970,7 +1023,7 @@ header{
 .allEventPopupModal .modal-content,
 .EventDetailPopupModal .modal-content,
 .goingBtnPopupModal .modal-content{
-    border-bottom:4px solid #337ab7;
+    border-bottom:4px solid #5b9bff;
     border-radius: 0px;
     padding: 20px;
     background-color: #f9f9f9;
@@ -991,7 +1044,7 @@ header{
   display: inline-block;
   text-align: center;
   font-size: 16px;
-  font-weight: 700;
+  font-family: 'Montserrat-Bold';
   color: #004a93;
 }
 .eventListHeader .preEvent a,
@@ -1035,9 +1088,12 @@ header{
 }
 .seeYouSoonImg{
   text-align: center;
-  color: #004a93;
   margin-top: 12%;
-  font-weight: 700;
+}
+.seeYouSoonImg>h3{
+  font-family: 'Montserrat-Bold';
+  font-size: 18px;
+  color: #004a93;
 }
 .seeYouSoonImg>img{
   width: 120px;
@@ -1057,7 +1113,7 @@ header{
 
 .foodDeliPopupModal .modal-content,
 .musicPopupModal .modal-content{
-    border-bottom:4px solid #337ab7;
+    border-bottom:4px solid #5b9bff;
     border-radius: 0px;
     padding: 10px;
     background-color: #f9f9f9;
@@ -1110,7 +1166,7 @@ header{
 
 /*****************Suggestions modal Start***************/
 .suggestionPopupModal .modal-content{
-    border-bottom:4px solid #337ab7;
+    border-bottom:4px solid #5b9bff;
     border-radius: 0px;
     padding: 10px;
     background-color: #f9f9f9;
@@ -1164,18 +1220,17 @@ header{
 
 .news-icon{
     text-align: center;
-    border: 1px solid #eaebed;
+    border: 1px solid #e4e8eb;
     padding: 10px;
     margin-bottom: 20px;
 }
 .news-icon:hover{
-  background-color: #eaebed;
+  background-color: #e4e8eb;
 }
 .news-icon>a{
   text-decoration: none;
   font-size: 14px;
   color:#242223;
-  font-family: 'Montserrat', sans-serif;
 }
 .news-icon .icon{
   margin: auto;
@@ -1219,9 +1274,11 @@ header{
     margin-bottom: 10px;
 }
 .bulletinSrch input{
+    font-family: 'Montserrat-Regular';
+    font-size: 14px;
     height: 45px;
     width: 100%;
-    border: 1px solid #ccc;
+    border: 1px solid #e4e8eb;
     border-radius: 20px;
     position: relative;
     padding: 2px 28px 2px 15px;
@@ -1245,6 +1302,7 @@ header{
 .bulletinBoardTabCont .bbPostCover .bbPostWrap{
   border-bottom: 1px solid #e4e8eb;
   margin-bottom: 50px;
+  padding-bottom: 20px;
 }
 .bulletinBoardTabCont .bbPostCover .bbPostWrap:last-child{
   border-bottom: 0px;
@@ -1260,12 +1318,8 @@ header{
   height: 99%;
   margin: auto;
 }
-.bbPostTxt{
-  font-size: 14px;
-}
 .bbPostTxt .titleTxt{
-  font-weight: 700;
-  font-family: 'MontserratBold';
+  font-family: 'Montserrat-Bold';
 }
 .bbPostTxt .postedTxt{
   font-size: 12px;
@@ -1276,10 +1330,10 @@ header{
 .bbPostTxt .postLink>a{
   text-decoration: none;
   color: #f0b511;
-  font-weight: 700;
+  font-family: 'Montserrat-Regular';
 }
 .bbPostWrap .contPosterLink{
-  padding: 15px 10px;
+  margin-top: 15px;
   text-align: right;
 }
 .contPosterLink>a,
@@ -1287,7 +1341,6 @@ header{
   text-decoration: none;
   color: #f0b511;
   font-size: 14px;
-  font-weight: 700;
 }
 
 /*****************Bulletin Board Pagination Start***************/
@@ -1388,7 +1441,7 @@ header{
 }
 .BMPostTitle{
   color: #5b9bff;
-  font-weight: 700;
+  font-family: 'Montserrat-Bold';
   font-size: 12px;
   text-align: center;
   margin-bottom: 45px;
@@ -1410,8 +1463,6 @@ header{
 .BMPostaWrap .morePosts a{
   text-decoration: none;
   color: #f0b511;
-  font-weight: 700;
-  font-size: 14px;
 }
 @media only screen  and (max-width: 767px){
   .BMLogoWrap .BMLogoCont{
@@ -1455,11 +1506,11 @@ header{
   margin-bottom: 0px;
 }
 .companyDirInfo .companyName{
-  font-weight: 700;
+  font-family: 'Montserrat-Bold';
   color: #004a93;
 }
 .companyDirInfo .companyType{
-  font-weight: 700;
+  font-family: 'Montserrat-Bold';
 }
 .BMCompanyDirectory .advertiseWrap{
   margin-bottom: 40px;
@@ -1468,6 +1519,9 @@ header{
 @media only screen and (max-width: 767px){
   .BMCompanyDirectory .advertiseWrap{
     display: none;
+  }
+  .companyDirTblWrap .table-responsive{
+    border: 0px;
   }
 }
 /*****************Business Marketplace End***************/
@@ -1517,7 +1571,7 @@ header{
 
 /*****************My Building Start***************/
 .BuildingWrapper{
-  margin-top: 158px;
+  margin-top: 142px;
 }
 #rotating-item-wrapper {
   position: relative;
@@ -1562,25 +1616,22 @@ header{
 }
 .breadcrumbCover .breadcrumb li+li:before {
     padding: 3px;
-    color: #818181;
+    color: #474646;
     font-family: 'FontAwesome';
     content: "\f105";
 }
 .breadcrumbCover .breadcrumb li a {
-    color: #818181;
+    color: #474646;
     font-size: 12px;
-    font-weight: 700;
     text-decoration: none;
 }
 .breadcrumbCover .breadcrumb li a.activeBread{
-    color: #474646;
-    text-decoration: none;
+    font-family: 'Montserrat-Bold';
 }
 
 /*****************breadcrumb Navigation End***************/
 .buildingTabWrap{
   margin-bottom: 40px;
-  font-size: 16px;
 }
 .buildingTabWrap .pageTitle h2{
     margin-top: 0px;
@@ -1590,12 +1641,13 @@ header{
   margin: 0 auto;
 }
 .buildTabContent h3{
-  font-weight: 700;
+  font-family: 'Montserrat-Bold';
+  font-size: 20px;
   color: #004a93;
   text-align: center;
 }
 .buildTabContent .amenties p{
-  font-weight: 700;
+  font-family: 'Montserrat-Bold';
 }
 .buildTabContent .amenties ul{
   padding-left: 60px;
@@ -1626,6 +1678,8 @@ header{
   position: relative;
 }
 .tenantCat select {
+    font-family: 'Montserrat-Regular';
+    font-size: 14px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -1640,6 +1694,8 @@ header{
     margin-left: 6px;
 }
 .tenantSrch input, .tenantSrch input:focus{
+  font-family: 'Montserrat-Regular';
+  font-size: 14px;
   height: 35px;
   width: 220px;
   border: 1px solid #ccc;
@@ -1668,12 +1724,13 @@ header{
   }
 .tanantDirTbl>tbody>tr>td:first-child{
   color: #004a93;
-  font-weight: 700;
+  font-family: 'Montserrat-Bold';
 }
 .tanantDirTbl>thead>tr>th{
   border-bottom: 0px;
   vertical-align: top;
-  color: #599bfc;
+  color: #5b9bff;
+  font-family: 'Montserrat-Bold';
 }
 .advertiseHere{
   min-height: 180px;
@@ -1709,14 +1766,14 @@ header{
 .buildingTabWrap .securityContent{
   max-width: 85%;
   margin: 0 auto;
-  font-size: 15px;
 }
 .securityContent h3{
-  font-weight: 700;
-  color: #004a93;
-  text-align: center;
   margin-top: 0px;
   margin-bottom: 20px;
+  font-family: 'Montserrat-Bold';
+  font-size: 20px;
+  color: #004a93;
+  text-align: center;
 }
 .securityContent>p{
   margin-bottom: 40px;
@@ -1728,15 +1785,17 @@ header{
 .buildingTabWrap .parkingTabContent{
   max-width: 85%;
   margin: 0 auto;
-  font-size: 16px;
 }
 .parkingTabContent>h3{
-  font-weight: 700;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  font-family: 'Montserrat-Bold';
+  font-size: 20px;
   color: #004a93;
   text-align: center;
 }
 .parkingTabContent .parkInfo p{
-  font-weight: 700;
+  font-family: 'Montserrat-Bold';
 }
 .parkingTabContent .parkInfo ul{
   padding-left: 70px;
@@ -1749,7 +1808,7 @@ header{
   text-decoration: none;
 }
 .parkingTabContent .pakrFootTxt{
-  font-weight: 700;
+  font-family: 'Montserrat-Bold';
 }
 /*****************Parking Tab End***************/
 
@@ -1758,14 +1817,14 @@ header{
 .buildingTabWrap .AccessibilityContent{
   max-width: 85%;
   margin: 0 auto;
-  font-size: 16px;
 }
 .AccessibilityContent h3{
-  font-weight: 700;
-  color: #004a93;
-  text-align: center;
   margin-top: 0px;
   margin-bottom: 20px;
+  font-family: 'Montserrat-Bold';
+  font-size: 20px;
+  color: #004a93;
+  text-align: center;
 }
 .AccessibilityContent .whatAODA,
 .AccessibilityContent .commitment{
@@ -1783,17 +1842,17 @@ header{
   text-align: center;
   width: 32%;
   display: inline-block;
+  vertical-align: top;
 }
 .downloadsWrap .downloads p{
   color: #004a93;
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 14px;
+  font-family: 'Montserrat-Bold';
 }
 .downloadsWrap .downloads a{
   text-decoration: none;
   color: #f0b511;
-  font-size: 14px;
-  font-weight: 700;
+  font-family: 'Montserrat-Regular';
 }
 .downloadsWrap .downloads img{
   max-width: 70px;
@@ -1812,17 +1871,19 @@ header{
 .buildingTabWrap .contactTabCont{
   max-width: 85%;
   margin: 0 auto;
-  font-size: 14px;
 }
 .contactTabCont h3{
+  margin-top: 0px;
+  margin-bottom: 20px;
+  font-family: 'Montserrat-Bold';
+  font-size: 20px;
   color: #004a93;
-  font-weight: 700;
   text-align: center;
 }
 .contactTbl caption{
   color: #004a93;
-   font-size: 18px;
-  font-weight: 700;
+  font-size: 16px;
+  font-family: 'Montserrat-Bold';
   text-align: left;
 }
 .contactTbl{
@@ -1835,6 +1896,7 @@ header{
 .contactTbl>thead>tr>th{
   border-bottom: 0px;
   vertical-align: top;
+  font-family: 'Montserrat-Bold';
 }
 .contactTbl>tbody>tr>td>a{
   text-decoration: none;
@@ -1847,15 +1909,17 @@ header{
 .buildingTabWrap .PoliciesContent{
   max-width: 85%;
   margin: 0 auto;
-  font-size: 15px;
 }
 .PoliciesContent h3{
   text-align: center;
 }
 .PoliciesContent h4,
 .PoliciesContent h3{
+  margin-top: 0px;
+  margin-bottom: 20px;
+  font-family: 'Montserrat-Bold';
+  font-size: 20px;
   color: #004a93;
-  font-weight: 700;
 }
 .PoliciesContent p{
   margin-bottom: 30px;

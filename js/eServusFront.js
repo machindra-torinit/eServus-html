@@ -156,7 +156,7 @@
 			if($("body").find(".tanantDirTblWrap").length > 0){
 				var tanantDirTblScroll = new scrollbot(".tanantDirTblWrap");
 			}
-
+			
 			// for Scroll effect JS to Company Directory on Business Marketplace
 			if($("body").find(".companyDirTblWrap").length > 0){
 				var companyDirTblWrap = new scrollbot(".companyDirTblWrap");	

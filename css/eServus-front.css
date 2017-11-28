@@ -11,10 +11,15 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'Montserrat-Bold';
   src: url('../fonts/Montserrat-Bold.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  src: url('../fonts/Montserrat-SemiBold.ttf')  format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -1123,6 +1128,12 @@ header{
 .musicPopupModal .modal-body{
   padding-bottom: 0px;
 }
+.foodHeader{
+  margin-bottom: 20px;
+}
+.foodHeader img{
+  margin: 0 auto;
+}
 .foodEmail, .foodPass{
   margin-bottom: 10px;
 }
@@ -1342,7 +1353,18 @@ header{
   color: #f0b511;
   font-size: 14px;
 }
-
+@media only screen and (max-width: 767px){
+  .bbPostWrap .bbPostImg{
+    max-width: 144px;
+    margin: 0 auto 20px;
+  }
+  .bbPostWrap .bbPostTxt,
+  .bbPostWrap .contPosterLink{
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+}
 /*****************Bulletin Board Pagination Start***************/
 .bbPostPagination .pagination,
 .bbPostPagination .pagination ul{
@@ -1375,6 +1397,12 @@ header{
     cursor: default;
     background-color: #fff;
     border-color: #fff;
+}
+@media only screen and (max-width: 767px){
+  .bbPostPagination{
+    margin-bottom: 20px;
+  }
+  
 }
 /*****************Bulletin Board Pagination End***************/
 

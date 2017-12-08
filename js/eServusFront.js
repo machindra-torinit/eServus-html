@@ -183,7 +183,7 @@
 					editable: false,
 					eventLimit: true, // allow "more" link when too many events
 					height: 210,
-					/*events: [
+					events: [
 						{
 							title: 'All Day Event',
 							start: '2017-10-01'
@@ -238,7 +238,7 @@
 							url: 'http://google.com/',
 							start: '2017-10-28'
 						}
-					]*/
+					]
 				});
 			}
 		});

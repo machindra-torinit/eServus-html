@@ -767,6 +767,31 @@ header{
 .morePostLink>a i{
     padding-left: 5px;
 }
+.shareSociMedia{
+  position: relative;
+}
+.shareSociMedia .fa-share-alt{
+  color: #f0b511;
+}  
+.shareSociMedia:hover .shareSociMedIcons{
+  display: block;
+}
+.shareSociMedia .shareSociMedIcons{
+    display:none;
+    width: 130px;
+    min-width: 130px;
+    background-color: #fff;
+    color: #474646;
+    position: absolute;
+    top: 17px;
+    padding: 10px!important;
+    text-transform: none;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+  }
+.shareSociMedia .shareSociMedIcons>i{
+  padding: 5px;
+}
 .advertiseBottom{
     margin-bottom: 5px;
 }
@@ -1963,3 +1988,10 @@ header{
   }
 }
 /*****************Policies & Lagal Tab End***************/
+
+
+.bbImgLightBoxSliderWrap{
+  position: relative;
+  width: 100%;
+  height: auto;
+}

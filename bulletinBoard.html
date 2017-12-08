@@ -137,6 +137,7 @@
 			 				<div class="bbPostCover">
 			 					<div class="bbPostWrap">
 									<div class="col-sm-3">
+										<!-- <div class="bbPostImg" data-toggle="modal" data-target="#imgLightBoxSliderPopup"> -->
 										<div class="bbPostImg">
 											<img src="images/bbPost01.png" class="img-responsive">
 										</div>
@@ -430,6 +431,86 @@
 <!-- Bulletin Board Contact Poster Link Popup Modal End -->
 
 
+<!-- Bulletin Board  Posts Image Slider Popup Modal Start -->	
+
+	<div class="contactPosterPopupModal">
+	  <div class="modal fade" id="imgLightBoxSliderPopup" role="dialog">
+	    <div class="modal-dialog modal-md">
+	    
+	    <!--   Modal content -->
+	      	<div class="modal-content">
+	      
+	          	<div class="clearfix">
+	          		<!-- <button type="button" class="close" data-dismiss="modal"><strong>&times;</strong></button> -->
+	          		<button type="button" class="close imgLightBoxClose"><strong>&times;</strong></button>
+	          	</div>
+	          	<!-- <h4 class="modal-title text-center"><strong>Contact Poster</strong></h4> -->
+	         
+		        <div class="modal-body clearfix">
+		          
+					<div class="bbImgLightBoxSliderWrap"">
+						<div class="clearfix">
+			                <ul id="bbImgLightBoxSlider" class="gallery list-unstyled">
+			                    <li data-thumb="images/img/thumb/cS-1.jpg"> 
+			                        <img src="images/img/cS-1.jpg" />
+			                         </li>
+			                    <li data-thumb="images/img/thumb/cS-2.jpg"> 
+			                        <img src="images/img/cS-2.jpg" />
+			                         </li>
+			                    <li data-thumb="images/img/thumb/cS-3.jpg"> 
+			                        <img src="images/img/cS-3.jpg" />
+			                         </li>
+			                    <li data-thumb="images/img/thumb/cS-4.jpg"> 
+			                        <img src="images/img/cS-4.jpg" />
+			                         </li>
+			                    <li data-thumb="images/img/thumb/cS-5.jpg"> 
+			                        <img src="images/img/cS-5.jpg" />
+			                         </li>
+			                    <li data-thumb="images/img/thumb/cS-6.jpg"> 
+			                        <img src="images/img/cS-6.jpg" />
+			                         </li>
+			                    <li data-thumb="images/img/thumb/cS-7.jpg"> 
+			                        <img src="images/img/cS-7.jpg" />
+			                         </li>
+			                    <li data-thumb="images/img/thumb/cS-8.jpg"> 
+			                        <img src="images/img/cS-8.jpg" />
+			                         </li>
+			                    <li data-thumb="images/img/thumb/cS-9.jpg"> 
+			                        <img src="images/img/cS-9.jpg" />
+			                         </li>
+			                    <li data-thumb="images/img/thumb/cS-10.jpg"> 
+			                        <img src="images/img/cS-10.jpg" />
+			                         </li>
+			                    <li data-thumb="images/img/thumb/cS-11.jpg"> 
+			                        <img src="images/img/cS-11.jpg" />
+			                         </li>
+			                    <li data-thumb="images/img/thumb/cS-12.jpg"> 
+			                        <img src="images/img/cS-12.jpg" />
+			                         </li>
+			                    <li data-thumb="images/img/thumb/cS-13.jpg"> 
+			                        <img src="images/img/cS-13.jpg" />
+			                         </li>
+			                    <li data-thumb="images/img/thumb/cS-14.jpg"> 
+			                        <img src="images/img/cS-14.jpg" />
+			                         </li>
+			                    <li data-thumb="images/img/thumb/cS-15.jpg"> 
+			                        <img src="images/img/cS-15.jpg" />
+			                         </li>
+			                </ul>
+			            </div>
+					</div>
+		        </div>
+		        
+	      	</div>
+	      
+	    </div>
+	  </div>
+	</div>
+
+<!-- Bulletin Board Posts Image Slider Popup Modal End -->
+
+
+
 	<footer id="footer" class="footer">
 		<div class="container">
 			<div class="footLogo"><img src="images/Menkes_logo.png" class="img-responsive"></div>
@@ -511,5 +592,44 @@
 	<script src="js/aui-min.js"></script>
 	<script src='js/eServusFront.js'></script>
   
+  	<script type="text/javascript">
+  	$(document).ready(function() {
+  	
+  			var bbImgLightBoxSlider;
+  		$(document).on('click', '.bbPostImg', function(event) {
+  				
+  				$('#imgLightBoxSliderPopup').modal('show');
+
+				var takeTime = setTimeout(takeTimeLightBox ,145);
+				function takeTimeLightBox() {
+						
+				   		bbImgLightBoxSlider = $('#bbImgLightBoxSlider').lightSlider({
+				        gallery:true,
+		                item:1,
+		                thumbItem:3,
+		                slideMargin: 0,
+		                speed:500,
+		                auto:false,
+		                loop:true,
+		                mode: "fade",
+		                verticalHeight: 293,
+		                 
+		            });
+	  		
+				}
+  			
+  		});
+
+  		$('#imgLightBoxSliderPopup').on('hidden.bs.modal', function (e) {
+  			bbImgLightBoxSlider.destroy();
+  		});
+
+  		$(document).on('click', '.imgLightBoxClose', function(event) {
+  			$('#imgLightBoxSliderPopup').modal('hide');
+  		});
+
+
+  	 });//ready end
+  	</script>
 </body>
 </html>

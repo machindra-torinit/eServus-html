@@ -621,7 +621,7 @@ header{
   padding-bottom: 15px!important;
 }
 .calenderWrap .fc-basic-view .fc-body .fc-row {
-    min-height: 2.2em;
+    min-height: 1.9em;
 }
 .calenderWrap .fc-basic-view .fc-body .fc-row:last-child{
     display: none;
@@ -631,6 +631,16 @@ header{
 }
 .calenderWrap .fc-scroller{
   overflow-x: visible;
+}
+.activeEvent{
+  background-color: #f0b511!important;
+}
+.calenderWrap .fc-event-container{
+  display: none;
+}
+.calenderWrap .fc table {
+    border-collapse: separate;
+    border-spacing: 3px;
 }
 @media screen and (max-width: 991px){
   .weatherInfo, .calenderWrap{
@@ -789,7 +799,12 @@ header{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 2;
   }
-.shareSociMedia .shareSociMedIcons>i{
+.shareSociMedia .shareSociMedIcons a{
+  text-decoration: none;
+  cursor: pointer;
+   color: #474646;
+}
+.shareSociMedia .shareSociMedIcons i{
   padding: 5px;
 }
 .advertiseBottom{
@@ -1262,6 +1277,9 @@ header{
 }
 .news-icon:hover{
   background-color: #e4e8eb;
+}
+.selectedChannel{
+   background-color: #e4e8eb;
 }
 .news-icon>a{
   text-decoration: none;

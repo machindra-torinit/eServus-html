@@ -150,6 +150,24 @@
 		});
 
 
+		//for News Channel Modal
+		$(document).on('click','.news-icon',function(event){
+			$(this).toggleClass('selectedChannel');
+        });
+
+		//click on add channel button on News Channel Modal
+        $(document).on('click','#addChannel',function(event){
+			var selectedChannelList = $( ".annsmntNewsPopupModal" ).find('.selectedChannel');
+			console.log('selectedChannelList = ',selectedChannelList);
+
+            $( ".selectedChannel" ).each(function( index ) {
+			  console.log( index + ": " + $( this ).attr("data-code") );
+			});
+			$('#annoNewsPopup').modal('hide');
+            
+        });
+		
+
 	//for Scroll effect JS 
 		$(document).ready(function() {
 			// for Scroll effect JS on Tenant Directory Tab
@@ -237,10 +255,22 @@
 							title: 'Click for Google',
 							url: 'http://google.com/',
 							start: '2017-10-28'
+						},
+						{
+							title: 'Click for Google',
+							url: 'http://google.com/',
+							start: '2017-10-29'
 						}
-					]
+					],
+					eventRender: function (event, element, view) { 
+	                    var dateString = event.start.format("YYYY-MM-DD");
+	                 	 $(view.el[0]).find('.fc-day-top[data-date=' + dateString + ']').addClass('activeEvent')
+	                 }
 				});
 			}
+			$('.calenderWrap .activeEvent').click(function(event) {
+				$('#EventDetailsPopup').modal('show');
+			});
 		});
 
 

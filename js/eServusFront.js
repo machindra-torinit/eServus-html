@@ -91,7 +91,8 @@
     	//Building Page Slider JS
     	if($("body").find("#buildingSlider").length > 0){
 			$('#buildingSlider').lightSlider({
-		        gallery:true,
+		        gallery:false,
+		        pager:false,
                 item:1,
                 thumbItem:0,
                 slideMargin: 0,
@@ -268,12 +269,13 @@
 	                 }
 				});
 			}
-			$('.calenderWrap .activeEvent').click(function(event) {
+			
+			$(document).on('click','.calenderWrap .activeEvent',function(event){
+				var eventDate = $( this ).attr("data-date");
+				alert(eventDate);
 				$('#EventDetailsPopup').modal('show');
-			});
+		    });
 		});
-
-
 	//For Bulletin Board Post Pagination JS
 		if($("body").find("#bbPostPagination").length > 0){
 			YUI().use(

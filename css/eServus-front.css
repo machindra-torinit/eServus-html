@@ -178,7 +178,21 @@ header{
     padding: 5px;
     margin-left: 3px;
 }
-
+.notification-block:hover .notificationPopup{
+  display: block;
+}
+.notificationPopup{
+    display:none;
+    width: 265px;
+    background-color: #fff;
+    position: absolute;
+    top: 38px;
+    text-transform: none;
+    min-width: 130px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+    padding: 5px;
+}
 .signOutPopup{
     display:none;
     width: 130px;

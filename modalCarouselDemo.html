@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>eServus community</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
+    
+    <link href="css/lightslider.css" rel="stylesheet">
+    <link href='css/fullcalendar.min.css' rel='stylesheet'>
+    <link href="css/eServus-front.css" rel="stylesheet">
+	
+	<style type="text/css">
+		/*.btn-default {
+		    top: 25%;
+		    left:25%; 
+		    color: #999; 
+		    background: #fffccc; 
+		} */
+		
+		.notification-block .dropdown-menu.notify-drop {
+		  min-width: 260px;
+		  background-color: #fff;
+		  min-height: 260px;
+		  max-height: 360px;
+		}
+		.notification-block .dropdown-menu.notify-drop .notify-drop-title {
+		  border-bottom: 1px solid #e2e2e2;
+		  padding: 5px 15px 10px 15px;
+		}
+		.notification-block .dropdown-menu.notify-drop .drop-content {
+		  min-height: 280px;
+		  max-height: 280px;
+		  overflow-y: scroll;
+		}
+		.notification-block .dropdown-menu.notify-drop .drop-content::-webkit-scrollbar-track
+		{
+		  background-color: #F5F5F5;
+		}
+
+		.notification-block .dropdown-menu.notify-drop .drop-content::-webkit-scrollbar
+		{
+		  width: 8px;
+		  background-color: #F5F5F5;
+		}
+
+		.notification-block .dropdown-menu.notify-drop .drop-content::-webkit-scrollbar-thumb
+		{
+		  background-color: #ccc;
+		}
+		.notification-block .dropdown-menu.notify-drop .drop-content > li {
+		  border-bottom: 1px solid #e2e2e2;
+		  padding: 10px 0px 5px 0px;
+		}
+		.notification-block .dropdown-menu.notify-drop .drop-content > li:nth-child(2n+0) {
+		  background-color: #fafafa;
+		}
+		.notification-block .dropdown-menu.notify-drop .drop-content > li:after {
+		  content: "";
+		  clear: both;
+		  display: block;
+		}
+		.notification-block .dropdown-menu.notify-drop .drop-content > li:hover {
+		  background-color: #fcfcfc;
+		}
+		.notification-block .dropdown-menu.notify-drop .drop-content > li:last-child {
+		  border-bottom: none;
+		}
+		.notification-block .dropdown-menu.notify-drop .drop-content > li .notify-img {
+		  float: left;
+		  display: inline-block;
+		  width: 45px;
+		  height: 45px;
+		  margin: 0px 0px 8px 0px;
+		}
+		.notification-block .dropdown-menu.notify-drop .allRead {
+		  margin-right: 7px;
+		}
+		.notification-block .dropdown-menu.notify-drop .rIcon {
+		  float: right;
+		  color: #999;
+		}
+		.notification-block .dropdown-menu.notify-drop .rIcon:hover {
+		  color: #333;
+		}
+		.notification-block .dropdown-menu.notify-drop .drop-content > li a {
+		  font-size: 12px;
+		  font-weight: normal;
+		}
+		.notification-block .dropdown-menu.notify-drop .drop-content > li {
+		  font-weight: bold;
+		  font-size: 11px;
+		}
+		.notification-block .dropdown-menu.notify-drop .drop-content > li hr {
+		  margin: 5px 0;
+		  width: 70%;
+		  border-color: #e2e2e2;
+		}
+		.notification-block .dropdown-menu.notify-drop .drop-content .pd-l0 {
+		  padding-left: 0;
+		}
+		.notification-block .dropdown-menu.notify-drop .drop-content > li p {
+		  font-size: 11px;
+		  color: #666;
+		  font-weight: normal;
+		  margin: 3px 0;
+		}
+		.notification-block .dropdown-menu.notify-drop .drop-content > li p.time {
+		  font-size: 10px;
+		  font-weight: 600;
+		  top: -6px;
+		  margin: 8px 0px 0px 0px;
+		  padding: 0px 3px;
+		  border: 1px solid #e2e2e2;
+		  position: relative;
+		  background-image: linear-gradient(#fff,#f2f2f2);
+		  display: inline-block;
+		  border-radius: 2px;
+		  color: #f0b511;
+		}
+		.notification-block .dropdown-menu.notify-drop .drop-content > li p.time:hover {
+		  background-image: linear-gradient(#fff,#fff);
+		}
+		.notification-block .dropdown-menu.notify-drop .notify-drop-footer {
+		  border-top: 1px solid #e2e2e2;
+		  bottom: 0;
+		  position: relative;
+		  padding: 8px 15px;
+		}
+		.notification-block .dropdown-menu.notify-drop .notify-drop-footer a {
+		  color: #777;
+		  text-decoration: none;
+		}
+		.notification-block .dropdown-menu.notify-drop .notify-drop-footer a:hover {
+		  color: #333;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="eServusHeader">
+			<div class="headerWrap">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-4 col-sm-2">
+							<div class="header-logo">
+								<a href="#"><img src="images/Menkes_logo.png" class="img-responsive"></a>	
+							</div>
+						</div>
+						<div class="col-xs-8 col-sm-10">
+							<div class="searchBoxWrap pull-left">
+								<form action="#" method="get">
+									<div class="headSearch">
+										<input type="text" class="form-control" name="search" id="search" placeholder="Search our offers" required="">
+										 <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+									</div>
+								</form>
+							</div>
+
+							<div class="cart-area pull-right">
+							  	<div class="notification-block dropdown">
+							    	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bell"></i>
+									<div class="notification">Notification<span class="note">05</span></div></a>
+									<!-- <div class="notificationPopup clearfix">
+										<div class="content">
+											Notification will comming here...
+										</div>
+									</div> -->
+									<ul class="dropdown-menu notify-drop">
+							            <div class="notify-drop-title">
+							            	<div class="row">
+							            		<div class="col-md-6 col-sm-6 col-xs-6">Bildirimler (<b>2</b>)</div>
+							            		<div class="col-md-6 col-sm-6 col-xs-6 text-right"><a href="" class="rIcon allRead" data-tooltip="tooltip" data-placement="bottom" title="tümü okundu."><i class="fa fa-dot-circle-o"></i></a></div>
+							            	</div>
+							            </div>
+							            <!-- end notify title -->
+							            <!-- notify content -->
+							            <div class="drop-content">
+							            	<li>
+							            		<div class="col-md-3 col-sm-3 col-xs-3"><div class="notify-img"><img src="http://placehold.it/45x45" alt=""></div></div>
+							            		<div class="col-md-9 col-sm-9 col-xs-9 pd-l0"><a href="">Ahmet</a> yorumladı. <a href="">Çicek bahçeleri...</a> <a href="" class="rIcon"><i class="fa fa-dot-circle-o"></i></a>
+							            		
+							            		<hr>
+							            		<p class="time">Şimdi</p>
+							            		</div>
+							            	</li>
+							            	<li>
+							            		<div class="col-md-3 col-sm-3 col-xs-3"><div class="notify-img"><img src="http://placehold.it/45x45" alt=""></div></div>
+							            		<div class="col-md-9 col-sm-9 col-xs-9 pd-l0"><a href="">Ahmet</a> yorumladı. <a href="">Çicek bahçeleri...</a> <a href="" class="rIcon"><i class="fa fa-dot-circle-o"></i></a>
+							            		<p>Lorem ipsum sit dolor amet consilium.</p>
+							            		<p class="time">1 Saat önce</p>
+							            		</div>
+							            	</li>
+							            	<li>
+							            		<div class="col-md-3 col-sm-3 col-xs-3"><div class="notify-img"><img src="http://placehold.it/45x45" alt=""></div></div>
+							            		<div class="col-md-9 col-sm-9 col-xs-9 pd-l0"><a href="">Ahmet</a> yorumladı. <a href="">Çicek bahçeleri...</a> <a href="" class="rIcon"><i class="fa fa-dot-circle-o"></i></a>
+							            		<p>Lorem ipsum sit dolor amet consilium.</p>
+							            		<p class="time">29 Dakika önce</p>
+							            		</div>
+							            	</li>
+							            	<li>
+							            		<div class="col-md-3 col-sm-3 col-xs-3"><div class="notify-img"><img src="http://placehold.it/45x45" alt=""></div></div>
+							            		<div class="col-md-9 col-sm-9 col-xs-9 pd-l0"><a href="">Ahmet</a> yorumladı. <a href="">Çicek bahçeleri...</a> <a href="" class="rIcon"><i class="fa fa-dot-circle-o"></i></a>
+							            		<p>Lorem ipsum sit dolor amet consilium.</p>
+							            		<p class="time">Dün 13:18</p>
+							            		</div>
+							            	</li>
+							            	<li>
+							            		<div class="col-md-3 col-sm-3 col-xs-3"><div class="notify-img"><img src="http://placehold.it/45x45" alt=""></div></div>
+							            		<div class="col-md-9 col-sm-9 col-xs-9 pd-l0"><a href="">Ahmet</a> yorumladı. <a href="">Çicek bahçeleri...</a> <a href="" class="rIcon"><i class="fa fa-dot-circle-o"></i></a>
+							            		<p>Lorem ipsum sit dolor amet consilium.</p>
+							            		<p class="time">2 Hafta önce</p>
+							            		</div>
+							            	</li>
+							            </div>
+							            <div class="notify-drop-footer text-center">
+							            	<a href=""><i class="fa fa-eye"></i> Tümünü Göster</a>
+							            </div>
+							          </ul>
+								</div>
+								 
+								<div class="custom-block">
+							    	<a href="javascript:void(0)"  id="signOut"><i class="fa fa-user-circle-o"></i>
+									<div class="notification">Welcome<span class="downArrow"><i class="fa fa-chevron-down"></i></span></div></a>
+
+									<div class="signOutPopup clearfix">
+										<div class="">
+											<div>
+												<a href="#" class="">Profile</a>
+											</div>
+											<div>
+												<a href="#" class="">Sign Out</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								 
+								 									  
+								<div class="cart-dropdown">
+									<a href="#" class="cart-dropdown-icon">
+									  <i class="fa fa-shopping-cart"></i>
+										<div class="cart">Cart<span class="cart">05</span></div></a>
+
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="navWrapper">
+				<nav>
+				  <a href="#" class="menu-trigger"><i class="fa fa-bars"></i></a>
+				  <ul>
+				    <li><a href="#">MY STORE</a></li>
+				    <li><a href="#" class="navActive">MY COMMUNITY</a></li>
+				    <li><a href="#">MY BUILDING</a></li>
+				    <div class="clearfix"></div>
+				  </ul>
+
+				</nav>
+			</div>
+		</div>
+	</header>
+
+	<div class="landingWrapper">
+		<div class="homepageBar">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="streetCount">
+					 		<h3>4711 Yonge Street</h3>
+						</div>
+					</div>
+					
+					<div class="col-sm-4">
+					 	<div class="pageTitle"><h2>Events</h2>
+							<div class="titleBorder"></div>
+					 	</div>
+					</div>
+						
+					<div class="col-sm-4">
+						<div class="weatherInfo text-center">	
+					 		<img src="images/weather.jpg" class="img-responsive" alt="Weather">
+						</div>
+					</div>
+
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container text-center">
+
+			<h1> Click Me </h1>
+			<!-- Large modal -->
+			<button class="btn btn-default" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
+			<button class="btn btn-default" data-toggle="modal" data-target="#EventDetailsPopup">Large modal</button>
+
+			<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			  <div class="modal-dialog modal-lg">
+			    <div class="modal-content">
+				    <div class="clearfix">
+		          		<button type="button" class="close" data-dismiss="modal"><strong>&times;</strong></button>
+		          	</div>
+			      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			      	<div class="eventListHeader">
+	          			<div class="preEvent">
+	          				<a href="#carousel-example-generic" role="button" data-slide="prev"><i class="fa fa-angle-left" aria-hidden="true"></i> Previous</a>
+	          			</div>
+	          			<div class="nextEvent">
+	          				<a href="#carousel-example-generic" role="button" data-slide="next">Next <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+	          			</div>
+	          			<div class="eventTitle">
+	          				All Event in March
+	          			</div>
+
+	          			<div class="clearfix"></div>
+	          		</div>
+			      <!-- Wrapper for slides -->
+					  <div class="carousel-inner">
+						   <div class="item active">
+						     <div class="eventListWrap">
+			          			<div class="eventData">
+			          				<div class="evevntDate"><span>3/08/2018 8:30AM</span>
+			          					<a href="#">Creative Morning Talk <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+			          				</div>
+			          				<div class="eventImg">
+			          					<img src="images/Event-List-Pop-Up.png" alt="" class="img-responsive">
+			          				</div>
+			          			</div>
+			          			<div class="eventData" data-toggle="modal" data-target="#EventDetailsPopup" data-dismiss="modal">
+			          				<div class="evevntDate"><span>3/20/2018 12:30AM</span>
+			          					<a href="#">Salad Club <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+			          				</div>
+			          				<div class="eventImg">
+			          					<img src="images/Event-List-Pop-Up_2.png" alt="" class="img-responsive">
+			          				</div>
+			          			</div>
+			          			<div class="eventData">
+			          				<div class="evevntDate"><span>3/08/2018 8:30AM</span>
+			          					<a href="#">Creative Morning Talk <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+			          				</div>
+			          				<div class="eventImg">
+			          					<img src="images/Event-List-Pop-Up.png" alt="" class="img-responsive">
+			          				</div>
+			          			</div>
+			          			<div class="eventData">
+			          				<div class="evevntDate"><span>3/20/2018 12:30AM</span>
+			          					<a href="#">Salad Club <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+			          				</div>
+			          				<div class="eventImg">
+			          					<img src="images/Event-List-Pop-Up_2.png" alt="" class="img-responsive">
+			          				</div>
+			          			</div>
+			          		</div>
+					    </div>
+					    <div class="item">
+						     <div class="eventListWrap">
+			          			<div class="eventData">
+			          				<div class="evevntDate"><span>3/08/2018 8:30AM</span>
+			          					<a href="#">Creative Morning Talk <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+			          				</div>
+			          				<div class="eventImg">
+			          					<img src="images/Event-List-Pop-Up.png" alt="" class="img-responsive">
+			          				</div>
+			          			</div>
+			          			<div class="eventData">
+			          				<div class="evevntDate"><span>3/20/2018 12:30AM</span>
+			          					<a href="#">Salad Club <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+			          				</div>
+			          				<div class="eventImg">
+			          					<img src="images/Event-List-Pop-Up_2.png" alt="" class="img-responsive">
+			          				</div>
+			          			</div>
+			          		</div>
+					    </div>
+					     <div class="item">
+					      <img class="img-responsive" src="http://placehold.it/1200x600/fcf00c/000&text=Three" alt="...">
+					      <div class="carousel-caption">
+					        Another Image
+					      </div>
+					    </div>
+					  </div>
+
+					  <!-- Controls -->
+					  <!-- <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+					    <span class="glyphicon glyphicon-chevron-left"></span>
+					  </a>
+					  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+					    <span class="glyphicon glyphicon-chevron-right"></span>
+					  </a> -->
+					</div>
+			    </div>
+			  </div>
+			</div>
+
+			<div class="EventDetailPopupModal">
+			  <div class="modal fade" id="EventDetailsPopup" role="dialog">
+			    <div class="modal-dialog modal-md">
+			    
+			    <!--   Modal content -->
+			      	<div class="modal-content">
+			      
+			          	<div class="clearfix">
+			          		<button type="button" class="close" data-dismiss="modal"><strong>&times;</strong></button>
+			          	</div>
+			          	
+				        <div class="modal-body clearfix">
+				          	<div class="EventDetailPopupWrap">
+				          		<div id="carouselEventDetail" class="carousel slide" data-ride="carousel" data-interval="false">
+					          		<div class="eventListHeader">
+					          			<div class="preEvent">
+					          				<a href="#carouselEventDetail" role="button" data-slide="prev"><i class="fa fa-angle-left" aria-hidden="true"></i> Previous</a>
+					          			</div>
+					          			<div class="nextEvent">
+					          				<a href="#carouselEventDetail" role="button" data-slide="next">Next <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+					          			</div>
+					          			<div class="eventTitle">
+					          				All Event in March
+					          			</div>
+
+					          			<div class="clearfix"></div>
+					          		</div>
+
+					          		<div class="carousel-inner">
+							   			<div class="item active">
+							   				<div class="eventDetailWrap">
+							          			<div class="eventDetailImg">
+							          				<img src="images/Event-List-Pop-Up_2.png" alt="" class="img-responsive">
+							          			</div>
+							          			<div class="eventDetailTxt">
+							          				<p>Date: Every Tuesday 12:30PM - 2:00PM</p>
+							          				<p>Join us every Tuesday on the 4th floor a communal meal. Bring two items to share (preferable one vegetable or fruit and one protein such as nuts or salmon) and participate in the step-up abd clean-up and you will experience one of the best lunches around. If thats not enough, then how about the unique opportunity to relax, discuss, and collaborate with fellow tenants!</p>
+							          				<p>See you for lunch!</p>
+							          			</div>
+							          			<div class="eventDetailBtn">
+										             <button type="button" class="lgBtn" data-toggle="modal" data-target="#goingBtnPopup" data-dismiss="modal">Going</button>
+										        </div>
+							          		</div>
+							   			</div>
+
+							   			<div class="item">
+							   				<div class="eventDetailWrap">
+							          			<div class="eventDetailImg">
+							          				<img src="images/Event-List-Pop-Up_2.png" alt="" class="img-responsive">
+							          			</div>
+							          			<div class="eventDetailTxt">
+							          				<p>Date: Every Tuesday 12:30PM - 2:00PM</p>
+							          				<p>Join us every Tuesday on the 4th floor a communal meal. Bring two items to share (preferable one vegetable or fruit and one protein such as nuts or salmon) and participate in the step-up abd clean-up and you will experience one of the best lunches around. If thats not enough, then how about the unique opportunity to relax, discuss, and collaborate with fellow tenants!</p>
+							          				<p>See you for lunch!</p>
+							          			</div>
+							          			<!-- <div class="eventDetailBtn">
+										             <button type="button" class="lgBtn" data-toggle="modal" data-target="#goingBtnPopup" data-dismiss="modal">Going</button>
+										        </div> -->
+							          		</div>
+							   			</div>
+							   			<div class="item">
+							   				<div class="eventDetailWrap">
+							          			<div class="eventDetailImg">
+							          				<img src="images/Event-List-Pop-Up_2.png" alt="" class="img-responsive">
+							          			</div>
+							          			<div class="eventDetailTxt">
+							          				<p>Date: Every Tuesday 12:30PM - 2:00PM</p>
+							          				<p>Join us every Tuesday on the 4th floor a communal meal. Bring two items to share (preferable one vegetable or fruit and one protein such as nuts or salmon) and participate in the step-up abd clean-up and you will experience one of the best lunches around.</p>
+							          			</div>
+							          			<div class="eventDetailBtn">
+										             <button type="button" class="lgBtn" data-toggle="modal" data-target="#goingBtnPopup" data-dismiss="modal">Going</button>
+										        </div>
+							          		</div>
+							   			</div>
+							   		</div>
+						   		</div>
+				          	</div>
+				        </div>
+				        
+			      	</div>
+			      
+			    </div>
+			  </div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<footer id="footer" class="footer">
+		<div class="container">
+			<div class="footLogo"><img src="images/eservus-logo.png" class="img-responsive"></div>
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="footerLinks">
+						<ul>
+						    <li><a href="#">Why eServus?</a></li>
+						    <li><a href="#">Suppliers</a></li>
+						    <li><a href="#">Property Managers</a></li>
+						    <li><a href="#">FAQ</a></li>
+						    <li><a href="#">Contact</a></li>
+							<li><a href="#">Terms &amp; Condition</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="footerSocial">
+						<p>Stay Connected</p>
+						<i class="fa fa-tumblr-square"></i>
+						<i class="fa  fa-twitter-square"></i>
+						<i class="fa  fa-instagram"></i>
+						
+						<div class="clearfix"></div>
+						<div class="contact-details">
+							eServus Toronto <strong>(not your city?)</strong><br>
+							Monday to Friday:9:00AM - 5:00PM
+						</div>
+						<div class="contact-details">
+							<a href="mailto:request@eServus.com">request@eServus.com</a><br>416 598 8888
+						
+					    </div>
+					</div>
+				</div>
+				
+				<div class="col-sm-5">
+					<div class="newsletter">
+						
+						<p class="newsletterInfo"><b>Sign up to receive emails from eServus to find out about the latest shows and events, contestes, opportunities and exclusiveoffers.</b></p>
+
+						<div class="alert alert-success hidden" id="newsletterSuccess">
+							<strong>Success!</strong> You've been added to our email list.
+						</div>
+
+						<div class="alert alert-danger hidden" id="newsletterError"></div>
+
+						<form id="newsletterForm" action="" method="POST">
+							<div class="input-group">
+								<input class="form-control" placeholder="Email Address" name="newsletterEmail" id="newsletterEmail" type="text">
+								<span class="SignUpBtn">
+									<button class="" type="submit">Sign Up</button>
+								</span>
+							</div>
+						</form>
+						
+						<div class="pricavy-details">
+							You can unsubscribe at any time. For additional information on eServus privacy commitment to you, please view our Privacy Policy.
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+				<p class="copyright-text">Copyright © eServus Inc. All Rights Reserved.</p>
+			</div>
+		</div>
+	</footer>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  	<script src="js/bootstrap.min.js"></script>
+  	<script src="js/lightslider.js"></script>
+  	<script src='js/moment.min.js'></script>
+	<script src='js/fullcalendar.min.js'></script>
+	<script src="js/scrollbot.min.js"></script>
+	<script src="js/aui-min.js"></script>
+	<script src='js/eServusFront.js'></script>
+
+</body>
+</html>

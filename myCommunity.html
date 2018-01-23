@@ -38,13 +38,64 @@
 
 							<div class="cart-area pull-right">
 							  	<div class="notification-block">
-							    	<a href="#"><i class="fa fa-bell"></i>
+							    	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bell"></i>
 									<div class="notification">Notification<span class="note">05</span></div></a>
-									<div class="notificationPopup clearfix">
+									<!-- <div class="notificationPopup clearfix">
 										<div class="content">
 											Notification will comming here...
 										</div>
-									</div>
+									</div> -->
+									<ul class="dropdown-menu notify-drop">
+							            <div class="notify-drop-title">
+							            	<div class="row">
+							            		<div class="col-md-6 col-sm-6 col-xs-6">Bildirimler (<b>2</b>)</div>
+							            		<div class="col-md-6 col-sm-6 col-xs-6 text-right"><a href="" class="rIcon allRead" data-tooltip="tooltip" data-placement="bottom" title="tümü okundu."><i class="fa fa-dot-circle-o"></i></a></div>
+							            	</div>
+							            </div>
+							            <!-- end notify title -->
+							            <!-- notify content -->
+							            <div class="drop-content">
+							            	<li>
+							            		<div class="col-md-3 col-sm-3 col-xs-3"><div class="notify-img"><img src="http://placehold.it/45x45" alt=""></div></div>
+							            		<div class="col-md-9 col-sm-9 col-xs-9 pd-l0"><a href="">Ahmet</a> yorumladı. <a href="">Çicek bahçeleri...</a> <a href="" class="rIcon"><i class="fa fa-dot-circle-o"></i></a>
+							            		
+							            		<hr>
+							            		<p class="time">Şimdi</p>
+							            		</div>
+							            	</li>
+							            	<li>
+							            		<div class="col-md-3 col-sm-3 col-xs-3"><div class="notify-img"><img src="http://placehold.it/45x45" alt=""></div></div>
+							            		<div class="col-md-9 col-sm-9 col-xs-9 pd-l0"><a href="">Ahmet</a> yorumladı. <a href="">Çicek bahçeleri...</a> <a href="" class="rIcon"><i class="fa fa-dot-circle-o"></i></a>
+							            		<p>Lorem ipsum sit dolor amet consilium.</p>
+							            		<p class="time">1 Saat önce</p>
+							            		</div>
+							            	</li>
+							            	<li>
+							            		<div class="col-md-3 col-sm-3 col-xs-3"><div class="notify-img"><img src="http://placehold.it/45x45" alt=""></div></div>
+							            		<div class="col-md-9 col-sm-9 col-xs-9 pd-l0"><a href="">Ahmet</a> yorumladı. <a href="">Çicek bahçeleri...</a> <a href="" class="rIcon"><i class="fa fa-dot-circle-o"></i></a>
+							            		<p>Lorem ipsum sit dolor amet consilium.</p>
+							            		<p class="time">29 Dakika önce</p>
+							            		</div>
+							            	</li>
+							            	<li>
+							            		<div class="col-md-3 col-sm-3 col-xs-3"><div class="notify-img"><img src="http://placehold.it/45x45" alt=""></div></div>
+							            		<div class="col-md-9 col-sm-9 col-xs-9 pd-l0"><a href="">Ahmet</a> yorumladı. <a href="">Çicek bahçeleri...</a> <a href="" class="rIcon"><i class="fa fa-dot-circle-o"></i></a>
+							            		<p>Lorem ipsum sit dolor amet consilium.</p>
+							            		<p class="time">Dün 13:18</p>
+							            		</div>
+							            	</li>
+							            	<li>
+							            		<div class="col-md-3 col-sm-3 col-xs-3"><div class="notify-img"><img src="http://placehold.it/45x45" alt=""></div></div>
+							            		<div class="col-md-9 col-sm-9 col-xs-9 pd-l0"><a href="">Ahmet</a> yorumladı. <a href="">Çicek bahçeleri...</a> <a href="" class="rIcon"><i class="fa fa-dot-circle-o"></i></a>
+							            		<p>Lorem ipsum sit dolor amet consilium.</p>
+							            		<p class="time">2 Hafta önce</p>
+							            		</div>
+							            	</li>
+							            </div>
+							            <div class="notify-drop-footer text-center">
+							            	<a href=""><i class="fa fa-eye"></i> Tümünü Göster</a>
+							            </div>
+							          </ul>
 								</div>
 								 
 								<div class="custom-block">
@@ -732,12 +783,96 @@
 
 
 <!-- Event Details Popup Modal Start -->	
-
+	
 	<div class="EventDetailPopupModal">
 	  <div class="modal fade" id="EventDetailsPopup" role="dialog">
 	    <div class="modal-dialog modal-md">
 	    
 	    <!--   Modal content -->
+	      	<div class="modal-content">
+	      
+	          	<div class="clearfix">
+	          		<button type="button" class="close" data-dismiss="modal"><strong>&times;</strong></button>
+	          	</div>
+	          	
+		        <div class="modal-body clearfix">
+		          	<div class="EventDetailPopupWrap">
+		          		<div id="carouselEventDetail" class="carousel slide" data-ride="carousel" data-interval="false">
+			          		<div class="eventListHeader">
+			          			<div class="preEvent">
+			          				<a href="#carouselEventDetail" role="button" data-slide="prev"><i class="fa fa-angle-left" aria-hidden="true"></i> Previous</a>
+			          			</div>
+			          			<div class="nextEvent">
+			          				<a href="#carouselEventDetail" role="button" data-slide="next">Next <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+			          			</div>
+			          			<div class="eventTitle">
+			          				All Event in March
+			          			</div>
+
+			          			<div class="clearfix"></div>
+			          		</div>
+
+			          		<div class="carousel-inner">
+					   			<div class="item active">
+					   				<div class="eventDetailWrap">
+					          			<div class="eventDetailImg">
+					          				<img src="images/Event-List-Pop-Up_2.png" alt="" class="img-responsive">
+					          			</div>
+					          			<div class="eventDetailTxt">
+					          				<p>Date: Every Tuesday 12:30PM - 2:00PM</p>
+					          				<p>Join us every Tuesday on the 4th floor a communal meal. Bring two items to share (preferable one vegetable or fruit and one protein such as nuts or salmon) and participate in the step-up abd clean-up and you will experience one of the best lunches around. If thats not enough, then how about the unique opportunity to relax, discuss, and collaborate with fellow tenants!</p>
+					          				<p>See you for lunch!</p>
+					          			</div>
+					          			<div class="eventDetailBtn">
+								             <button type="button" class="lgBtn" data-toggle="modal" data-target="#goingBtnPopup" data-dismiss="modal">Going</button>
+								        </div>
+					          		</div>
+					   			</div>
+
+					   			<div class="item">
+					   				<div class="eventDetailWrap">
+					          			<div class="eventDetailImg">
+					          				<img src="images/Event-List-Pop-Up_2.png" alt="" class="img-responsive">
+					          			</div>
+					          			<div class="eventDetailTxt">
+					          				<p>Date: Every Tuesday 12:30PM - 2:00PM</p>
+					          				<p>Join us every Tuesday on the 4th floor a communal meal. Bring two items to share (preferable one vegetable or fruit and one protein such as nuts or salmon) and participate in the step-up abd clean-up and you will experience one of the best lunches around. If thats not enough, then how about the unique opportunity to relax, discuss, and collaborate with fellow tenants!</p>
+					          				<p>See you for lunch!</p>
+					          			</div>
+					          			<!-- <div class="eventDetailBtn">
+								             <button type="button" class="lgBtn" data-toggle="modal" data-target="#goingBtnPopup" data-dismiss="modal">Going</button>
+								        </div> -->
+					          		</div>
+					   			</div>
+					   			<div class="item">
+					   				<div class="eventDetailWrap">
+					          			<div class="eventDetailImg">
+					          				<img src="images/Event-List-Pop-Up_2.png" alt="" class="img-responsive">
+					          			</div>
+					          			<div class="eventDetailTxt">
+					          				<p>Date: Every Tuesday 12:30PM - 2:00PM</p>
+					          				<p>Join us every Tuesday on the 4th floor a communal meal. Bring two items to share (preferable one vegetable or fruit and one protein such as nuts or salmon) and participate in the step-up abd clean-up and you will experience one of the best lunches around.</p>
+					          			</div>
+					          			<div class="eventDetailBtn">
+								             <button type="button" class="lgBtn" data-toggle="modal" data-target="#goingBtnPopup" data-dismiss="modal">Going</button>
+								        </div>
+					          		</div>
+					   			</div>
+					   		</div>
+				   		</div>
+		          	</div>
+		        </div>
+		        
+	      	</div>
+	      
+	    </div>
+	  </div>
+	</div>
+
+	<!-- <div class="EventDetailPopupModal">
+	  <div class="modal fade" id="EventDetailsPopup" role="dialog">
+	    <div class="modal-dialog modal-md">
+
 	      	<div class="modal-content">
 	      
 	          	<div class="clearfix">
@@ -779,7 +914,7 @@
 	      
 	    </div>
 	  </div>
-	</div>
+	</div> -->
 
 <!-- Event Details Popup Modal End -->
 
